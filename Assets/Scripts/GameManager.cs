@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     {
         // unload active level
         UnloadScene(SceneManager.GetActiveScene().name);
+        Cursor.visible = true;
         App.screenManager.Show<MenuScreen>();
     }
 
