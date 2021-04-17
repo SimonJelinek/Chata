@@ -799,6 +799,7 @@ MonoBehaviour:
   _firePoint: {fileID: 644067466}
   _bulletPrefab: {fileID: 1612612987678581310, guid: 71664bb68e464764596d79624160a6d7, type: 3}
   _ammunitionDisplay: {fileID: 1417882349}
+  _reloadingText: {fileID: 6872398947679722147, guid: 9e1489610d007e64bbc38c60dcaa112a, type: 3}
   _allBullets: 2
   _magazineSize: 3
   _bulletsLeft: 2
@@ -830,7 +831,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 876849730}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.2, y: -1.12, z: 2.2095034}
+  m_LocalPosition: {x: 1.2, y: -1.42, z: 2.2095034}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1867815200}
@@ -1984,6 +1985,7 @@ MonoBehaviour:
   _firePoint: {fileID: 644067466}
   _bulletPrefab: {fileID: 1612612987678581310, guid: 71664bb68e464764596d79624160a6d7, type: 3}
   _ammunitionDisplay: {fileID: 0}
+  _reloadingText: {fileID: 0}
   _allBullets: 2
   _magazineSize: 3
   _bulletsLeft: 2

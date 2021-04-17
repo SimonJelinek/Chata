@@ -10,6 +10,7 @@ public class Shooting : MonoBehaviour
     public Transform _firePoint;
     public GameObject _bulletPrefab;
     public TextMeshProUGUI _ammunitionDisplay;
+   // public TextMeshProUGUI _reloadingText;
 
     [Header("Magazine")]
 
@@ -44,17 +45,32 @@ public class Shooting : MonoBehaviour
             _ammunitionDisplay.SetText(_bulletsLeft + " / " + _allBullets);
         }
 
+        /*if(_reloading)
+        {
+            _reloadingText.gameObject.SetActive(true);
+            Debug.Log("reloading is true");
+        } 
+        else
+        {
+            _reloadingText.gameObject.SetActive(false);
+            Debug.Log("reloading is false");
+        }*/
+
+
     }
 
 
     private void Shoot()
     {
-        GameObject _bullet = Instantiate(_bulletPrefab, _firePoint.position, _firePoint.rotation);
+        if(_reloading == false)
+        {
+            GameObject _bullet = Instantiate(_bulletPrefab, _firePoint.position, _firePoint.rotation);
 
-        Rigidbody2D _rb = _bullet.GetComponent<Rigidbody2D>();
-        _rb.AddForce(_firePoint.right * _bulletForce, ForceMode2D.Impulse);
+            Rigidbody2D _rb = _bullet.GetComponent<Rigidbody2D>();
+            _rb.AddForce(_firePoint.right * _bulletForce, ForceMode2D.Impulse);
 
-        _bulletsLeft --;
+            _bulletsLeft--;
+        }
     }
 
     private void Reload()

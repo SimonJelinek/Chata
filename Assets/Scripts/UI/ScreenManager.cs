@@ -12,6 +12,11 @@ public class ScreenManager : MonoBehaviour
         App.screenManager = this;
     }
 
+    private void Start()
+    {
+        Show<MenuScreen>();
+    }
+
     public void Show<T>()
     {
         foreach(ScreenBase screen in screens)

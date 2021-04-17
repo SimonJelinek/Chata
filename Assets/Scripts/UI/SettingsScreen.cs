@@ -5,4 +5,10 @@ using UnityEngine;
 public class SettingsScreen : ScreenBase
 {
 
+
+    public void GoBack()
+    {
+        App.screenManager.Hide<SettingsScreen>();
+        //App.screenManager.Show<MenuScreen>();
+    }
 }
