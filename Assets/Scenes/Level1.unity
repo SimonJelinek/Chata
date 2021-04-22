@@ -281,6 +281,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -400,6 +401,21 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70b0c71b82f76148910e02f4406e296, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 849347522}
+  offset: {x: 0, y: 0, z: 0}
+  t: 1
 --- !u!1 &644067465
 GameObject:
   m_ObjectHideFlags: 0
@@ -799,7 +815,6 @@ MonoBehaviour:
   _firePoint: {fileID: 644067466}
   _bulletPrefab: {fileID: 1612612987678581310, guid: 71664bb68e464764596d79624160a6d7, type: 3}
   _ammunitionDisplay: {fileID: 1417882349}
-  _reloadingText: {fileID: 6872398947679722147, guid: 9e1489610d007e64bbc38c60dcaa112a, type: 3}
   _allBullets: 2
   _magazineSize: 3
   _bulletsLeft: 2
@@ -1985,7 +2000,6 @@ MonoBehaviour:
   _firePoint: {fileID: 644067466}
   _bulletPrefab: {fileID: 1612612987678581310, guid: 71664bb68e464764596d79624160a6d7, type: 3}
   _ammunitionDisplay: {fileID: 0}
-  _reloadingText: {fileID: 0}
   _allBullets: 2
   _magazineSize: 3
   _bulletsLeft: 2
