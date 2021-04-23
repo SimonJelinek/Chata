@@ -14,7 +14,7 @@ public class Shooting : MonoBehaviour
 
     [Header("Weapon Types")]
 
-    [SerializeField] private int _allBullets;
+     public int _allBullets;
     [SerializeField] private int _magazineSize;
     [SerializeField] private int _bulletsLeft;
     [SerializeField] private float _reloadTime;
@@ -158,14 +158,7 @@ public class Shooting : MonoBehaviour
         }       
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Ammo"))
-        {
-            _allBullets = 10;
-            Destroy(collision.gameObject);
-        }
-    }
+    
 
 }
 
