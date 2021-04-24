@@ -4,15 +4,49 @@ using UnityEngine;
 
 public class StaticEnemyBulletType2 : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Rigidbody2D rb;
+
+    public float bulletSpeed;
+
+    float time;
+    float destroyTime = 3;
+    bool timer = false;
+
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
+        rb.velocity = new Vector2(bulletSpeed*-1, rb.velocity.y);
+        timer = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (timer)
+        {
+            time += Time.deltaTime;
+
+            if (time > destroyTime)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Ammo"))
+        {
+
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        Destroy(gameObject);
     }
 }

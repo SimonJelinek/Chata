@@ -9,8 +9,8 @@ public class StaticEnemyType2 : MonoBehaviour
     public float bulletSpawnTime;
 
     float time;
-    float xBulletSpawnPos = 4;
-    float yBulletSpawnPos = 0.19f;
+    public float xBulletSpawnPos;
+    public float yBulletSpawnPos;
 
     bool shooting = false;
 
