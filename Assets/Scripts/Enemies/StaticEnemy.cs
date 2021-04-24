@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class StaticEnemy : MonoBehaviour
 {
-    public GameObject bullet;
+    public GameObject staticEnemyBullet;
     public int numberOfBullets;
     public float hitDistance; 
     public float bulletSpawnTime;
     public float bulletSpace; // medzera medzi nábojmi
 
     float time;
-    float xBulletPos;
-    float yBulletPos = 0.19f;
+    float xBulletSpawnPos;
+    float yBulletSpawnPos = 0.19f;
 
     bool shooting = false;
 
@@ -24,12 +24,12 @@ public class StaticEnemy : MonoBehaviour
 
             if (time >= bulletSpawnTime)
             {
-                xBulletPos = 4f;
+                xBulletSpawnPos = 4f;
 
                 for (int x = 0; x < numberOfBullets; x++)
                 {
-                    Instantiate(bullet, new Vector2(xBulletPos, yBulletPos), Quaternion.identity);
-                    xBulletPos -= bulletSpace;
+                    Instantiate(staticEnemyBullet, new Vector2(xBulletSpawnPos, yBulletSpawnPos), Quaternion.identity);
+                    xBulletSpawnPos -= bulletSpace;
                 }
                 time = 0;
             }

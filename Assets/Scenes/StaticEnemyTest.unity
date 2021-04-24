@@ -400,7 +400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 561a7eabed20cac479f0910fca1e11db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1894798441799774003, guid: 6062db276af4f104b8186ad4ab085a0c, type: 3}
+  staticEnemyBullet: {fileID: 1894798441799774003, guid: 6062db276af4f104b8186ad4ab085a0c, type: 3}
   numberOfBullets: 5
   hitDistance: 10
   bulletSpawnTime: 0.5
