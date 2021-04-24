@@ -7,7 +7,11 @@ public class StaticEnemy : MonoBehaviour
     public GameObject bullet;
     public float hitDistance;
     public float spawnTime;
+
     float time;
+
+    float xBulletPos;
+    float yBulletPos = 0.19f;
 
     bool shooting = false;
 
@@ -19,9 +23,12 @@ public class StaticEnemy : MonoBehaviour
 
             if (time >= spawnTime)
             {
+                xBulletPos = 3.19f;
+
                 for (int x = 0; x < 3; x++)
                 {
-                    Instantiate(bullet, new Vector2(3.9f, 0.19f), Quaternion.identity);
+                    Instantiate(bullet, new Vector2(xBulletPos, yBulletPos), Quaternion.identity);
+                    xBulletPos -= 2;
                 }
                 time = 0;
             }
