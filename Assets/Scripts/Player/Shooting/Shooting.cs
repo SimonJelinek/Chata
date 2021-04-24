@@ -155,9 +155,18 @@ public class Shooting : MonoBehaviour
         {
             if (_bulletsLeft > 0)
             {
-                _allBullets -= _magazineSize - _bulletsLeft;
-                _bulletsLeft = _magazineSize;
-                _reloading = false;
+                if(_bulletsLeft + _allBullets > _magazineSize)
+                {
+                    _allBullets -= _magazineSize - _bulletsLeft;
+                    _bulletsLeft = _magazineSize;
+                    _reloading = false;
+                }
+                else
+                {                  
+                    _bulletsLeft += _allBullets;
+                    _allBullets = 0;
+                    _reloading = false;
+                }
             }
             if (_bulletsLeft == 0)
             {
