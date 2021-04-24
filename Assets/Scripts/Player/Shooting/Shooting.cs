@@ -119,13 +119,23 @@ public class Shooting : MonoBehaviour
 
     private void Reload()
     {
-        _reloading = true;
-        Invoke("ReloadFinished", _reloadTime); 
+        if(_bulletsLeft < _magazineSize)
+        {
+            if (_bulletsPerTap >= 2)
+            {
+                _reloading = true;
+                Invoke("ReloadFinishedShotgun", _reloadTime);
+            }
+            else
+            {
+                _reloading = true;
+                Invoke("ReloadFinished", _reloadTime);
+            }
+        }
     }
 
     private void ReloadFinished()
-    {
-        
+    {        
         if(_allBullets >= _magazineSize && _reloading == true)
         {
             if(_bulletsLeft > 0)
@@ -158,7 +168,50 @@ public class Shooting : MonoBehaviour
         }       
     }
 
-    
+    private void ReloadFinishedShotgun()
+    {
+        if (_allBullets >= _magazineSize && _reloading == true)
+        {
+            if (_bulletsLeft > 0)
+            {
+                _bulletsLeft += _bulletsPerTap;
+                _allBullets -= _bulletsPerTap;
+                _reloading = false;
+                Invoke("Reload", 0.15f);
+            }
+            if (_bulletsLeft == 0)
+            {
+                _bulletsLeft += _bulletsPerTap;
+                _allBullets -= _bulletsPerTap;
+                _reloading = false;
+                Invoke("Reload", 0.15f);
+            }
+        }
+        if (_allBullets < _magazineSize && _reloading == true)
+        {
+            if (_bulletsLeft > 0)
+            {
+                _bulletsLeft += _bulletsPerTap;
+                _allBullets -= _bulletsPerTap;
+                _reloading = false;
+                if(_allBullets > 0)
+                {
+                    Invoke("Reload", 0.15f);
+                }
+
+            }
+            if (_bulletsLeft == 0)
+            {
+                _bulletsLeft += _bulletsPerTap;
+                _allBullets -= _bulletsPerTap;
+                _reloading = false;
+                if (_allBullets > 0)
+                {
+                    Invoke("Reload", 0.15f);
+                }
+            }
+        }
+    }
 
 }
 

@@ -663,7 +663,6 @@ GameObject:
   - component: {fileID: 849347520}
   - component: {fileID: 849347524}
   - component: {fileID: 849347523}
-  - component: {fileID: 849347525}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -759,7 +758,7 @@ Transform:
   m_GameObject: {fileID: 849347519}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.38, y: -2.44, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 2014448183}
   - {fileID: 1686890455}
@@ -814,31 +813,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.18182468, y: 0.17697847}
   m_EdgeRadius: 0
---- !u!114 &849347525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 849347519}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6737819f7f9b3ba48b00b14f0d875b6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _firePoint: {fileID: 644067466}
-  _bulletPrefab: {fileID: 1612612987678581310, guid: 71664bb68e464764596d79624160a6d7, type: 3}
-  _ammunitionDisplay: {fileID: 1417882349}
-  _allBullets: 14
-  _magazineSize: 6
-  _bulletsLeft: 6
-  _reloadTime: 1
-  _allowButtonHold: 0
-  _timeBetweenShooting: 0.2
-  _timeBetweenShots: 0.0001
-  _bulletsPerTap: 2
-  _spread: 3
-  _bulletForce: 20
 --- !u!1 &876849730
 GameObject:
   m_ObjectHideFlags: 0
@@ -1061,16 +1035,16 @@ MonoBehaviour:
   _firePoint: {fileID: 242733396}
   _bulletPrefab: {fileID: 1612612987678581310, guid: 71664bb68e464764596d79624160a6d7, type: 3}
   _ammunitionDisplay: {fileID: 1417882349}
-  _allBullets: 1
-  _magazineSize: 1
-  _bulletsLeft: 1
-  _reloadTime: 1
+  _allBullets: 30
+  _magazineSize: 20
+  _bulletsLeft: 20
+  _reloadTime: 0.5
   _allowButtonHold: 0
   _timeBetweenShooting: 0.1
-  _timeBetweenShots: 0.1
-  _bulletsPerTap: 2
-  _spread: 1
-  _bulletForce: 20
+  _timeBetweenShots: 0.0005
+  _bulletsPerTap: 5
+  _spread: 2
+  _bulletForce: 17
 --- !u!1 &970471325
 GameObject:
   m_ObjectHideFlags: 0
@@ -1646,8 +1620,8 @@ MonoBehaviour:
   _magazineSize: 10
   _bulletsLeft: 10
   _reloadTime: 2
-  _allowButtonHold: 0
-  _timeBetweenShooting: 0.01
+  _allowButtonHold: 1
+  _timeBetweenShooting: 0.2
   _timeBetweenShots: 0.1
   _bulletsPerTap: 1
   _spread: 1
@@ -2314,6 +2288,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2014448183}
+  - component: {fileID: 2014448184}
   m_Layer: 0
   m_Name: WeaponHolder
   m_TagString: Untagged
@@ -2338,6 +2313,19 @@ Transform:
   m_Father: {fileID: 849347522}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2014448184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014448182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1fd4d36836efd24785316d4c114a145, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _selectedWeapon: 1
 --- !u!1 &2095900624
 GameObject:
   m_ObjectHideFlags: 0
