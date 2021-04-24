@@ -5,11 +5,12 @@ using UnityEngine;
 public class StaticEnemy : MonoBehaviour
 {
     public GameObject bullet;
-    public float hitDistance;
-    public float spawnTime;
+    public int numberOfBullets;
+    public float hitDistance; 
+    public float bulletSpawnTime;
+    public float bulletSpace; // medzera medzi nábojmi
 
     float time;
-
     float xBulletPos;
     float yBulletPos = 0.19f;
 
@@ -21,14 +22,14 @@ public class StaticEnemy : MonoBehaviour
         {
             time += Time.deltaTime;
 
-            if (time >= spawnTime)
+            if (time >= bulletSpawnTime)
             {
-                xBulletPos = 3.19f;
+                xBulletPos = 4f;
 
-                for (int x = 0; x < 3; x++)
+                for (int x = 0; x < numberOfBullets; x++)
                 {
                     Instantiate(bullet, new Vector2(xBulletPos, yBulletPos), Quaternion.identity);
-                    xBulletPos -= 2;
+                    xBulletPos -= bulletSpace;
                 }
                 time = 0;
             }
