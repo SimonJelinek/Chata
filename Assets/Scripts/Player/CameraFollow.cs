@@ -7,11 +7,11 @@ public class CameraFollow : MonoBehaviour
     public Transform target;
     public Vector3 offset;
 
-    [Range(0, 10f)]
-    public float speed;
+    [Range(0, 1f)]
+    public float t;
 
-    void FixedUpdate()
+    void Update()
     {
-        transform.position = Vector3.Lerp(transform.position, new Vector3(target.position.x, target.position.y, transform.position.z) + offset, speed * Time.fixedDeltaTime);
+        transform.position = Vector3.Lerp(transform.position, new Vector3(target.position.x, target.position.y, transform.position.z) + offset, t);
     }
 }
