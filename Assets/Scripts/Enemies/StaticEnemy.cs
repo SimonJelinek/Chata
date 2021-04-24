@@ -19,15 +19,20 @@ public class StaticEnemy : MonoBehaviour
 
             if (time >= spawnTime)
             {
-                Instantiate(bullet, new Vector2(3.9f, 0.19f), Quaternion.identity);
+                for (int x = 0; x < 3; x++)
+                {
+                    Instantiate(bullet, new Vector2(3.9f, 0.19f), Quaternion.identity);
+                }
                 time = 0;
             }
-        }
+        }        
     }
 
     void FixedUpdate()
     {
-        if (Physics2D.Raycast(transform.position, Vector2.left, hitDistance))
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.left, hitDistance);
+
+        if (hit.collider!=null && hit.collider.CompareTag("Player"))
         {
             shooting = true;
         }
