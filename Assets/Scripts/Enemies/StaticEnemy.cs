@@ -11,9 +11,11 @@ public class StaticEnemy : MonoBehaviour
     public float bulletSpace; // medzera medzi nábojmi
 
     float time;
-    float xBulletSpawnPos;
-    float yBulletSpawnPos = 0.19f;
 
+    public float xBulletSpawnPos;
+    public float yBulletSpawnPos;
+
+    float xPos;
     bool shooting = false;
 
     void Update()
@@ -24,12 +26,12 @@ public class StaticEnemy : MonoBehaviour
 
             if (time >= bulletSpawnTime)
             {
-                xBulletSpawnPos = 4f;
+                xPos = xBulletSpawnPos;
 
                 for (int x = 0; x < numberOfBullets; x++)
                 {
-                    Instantiate(staticEnemyBullet, new Vector2(xBulletSpawnPos, yBulletSpawnPos), Quaternion.identity);
-                    xBulletSpawnPos -= bulletSpace;
+                    Instantiate(staticEnemyBullet, new Vector2(xPos, yBulletSpawnPos), Quaternion.identity);
+                    xPos -= bulletSpace;
                 }
                 time = 0;
             }

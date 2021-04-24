@@ -505,3 +505,5 @@ MonoBehaviour:
   hitDistance: 10
   bulletSpawnTime: 0.5
   bulletSpace: 1
+  xBulletSpawnPos: 4
+  yBulletSpawnPos: 0.19
