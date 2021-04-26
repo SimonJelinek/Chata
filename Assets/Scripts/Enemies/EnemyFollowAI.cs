@@ -19,6 +19,7 @@ public class EnemyFollowAI : MonoBehaviour
     private bool isFollowing;
     private bool isSearching;
     private int direction;
+    private float offset;
 
 
     private void Start()
@@ -27,6 +28,7 @@ public class EnemyFollowAI : MonoBehaviour
         isSearching = false;
         rb = GetComponent<Rigidbody2D>();
         direction = 1;
+        offset = 0.2f;
     }
     private void Update()
     {
@@ -85,13 +87,13 @@ public class EnemyFollowAI : MonoBehaviour
             // Ak je nalavo od hraca
             if (transform.position.x < player.position.x)
             {
-                FlipPlayer(1);
+                Flip(1);
             }
 
             // Ak je napravo od hraca
             if (transform.position.x > player.position.x)
             {
-                FlipPlayer(-1);
+                Flip(-1);
             }
         }
 
@@ -100,16 +102,31 @@ public class EnemyFollowAI : MonoBehaviour
     public void FollowPlayer()
     {
         // Ak je nalavo od hraca
-        if(transform.position.x < player.position.x)
+        /* if(transform.position.x < player.position.x)
+         {
+             Flip(1);
+             rb.velocity = new Vector2(speed, 0);
+         }
+
+         // Ak je napravo od hraca
+         if(transform.position.x > player.position.x)
+         {
+             Flip(-1);
+             rb.velocity = new Vector2(-speed, 0);
+         }*/
+
+        if (transform.position.x >= player.position.x - offset && transform.position.x <= player.position.x + offset)
         {
-            FlipPlayer(1);
+            rb.velocity = Vector2.zero;
+        }
+        else if(transform.position.x < player.position.x)
+        {
+            Flip(1);
             rb.velocity = new Vector2(speed, 0);
         }
-
-        // Ak je napravo od hraca
-        if(transform.position.x > player.position.x)
+        else if(transform.position.x > player.position.x)
         {
-            FlipPlayer(-1);
+            Flip(-1);
             rb.velocity = new Vector2(-speed, 0);
         }
     }
@@ -121,7 +138,7 @@ public class EnemyFollowAI : MonoBehaviour
         rb.velocity = Vector2.zero;
     }
 
-    public void FlipPlayer(int dir)
+    public void Flip(int dir)
     {
         direction = dir;
         transform.localScale = new Vector2(dir, 1);
