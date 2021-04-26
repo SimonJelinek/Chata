@@ -7,6 +7,8 @@ public class Movement : MonoBehaviour
     [Header("Components")]
 
     public Transform _feetPos;
+    public ParticleSystem dustParticles;
+    private ParticleSystem.EmissionModule dustParticlesEmission;
     public SpriteRenderer sr;
     private Rigidbody2D _rb;
 
@@ -41,6 +43,7 @@ public class Movement : MonoBehaviour
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        dustParticlesEmission = dustParticles.emission;
     }
 
     private void Update()
@@ -133,6 +136,16 @@ public class Movement : MonoBehaviour
     private void MoveCharacter()
     {
         _rb.AddForce(new Vector2(_horizontalDirection, 0f) * _movementAcceleration);
+
+        // Adding dust particles
+        if(GetInput().x != 0 && _isGrounded)
+        {
+            dustParticlesEmission.rateOverTime = 35f;
+        }
+        else
+        {
+            dustParticlesEmission.rateOverTime = 0f;
+        }
 
         if (Mathf.Abs(_rb.velocity.x) > _maxMoveSpeed)
         {
