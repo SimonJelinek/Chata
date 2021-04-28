@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 303945584}
   - component: {fileID: 303945583}
   - component: {fileID: 303945582}
+  - component: {fileID: 303945585}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -211,6 +212,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &303945585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303945581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70b0c71b82f76148910e02f4406e296, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 27963478}
+  offset: {x: 0, y: 0, z: 0}
+  lookAheadAmount: {x: 3.1, y: 0, z: 0}
+  speed: 1.2
 --- !u!1 &1254659406
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,18 +567,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0017194748, y: -0.00072300434}
+  m_Offset: {x: -0.0015006065, y: -0.00072312355}
   m_SpriteTilingProperty:
     border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.16, y: 0.16}
-    newSize: {x: 16.265728, y: 0.1788092}
+    newSize: {x: 29.807972, y: 0.1788092}
     adaptiveTilingThreshold: 0.5
     drawMode: 1
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 16.237764, y: 0.15224195}
+  m_Size: {x: 29.782291, y: 0.15296078}
   m_EdgeRadius: 0
 --- !u!212 &2116639580
 SpriteRenderer:
@@ -608,7 +625,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 16.265728, y: 0.1788092}
+  m_Size: {x: 29.807972, y: 0.1788092}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -622,7 +639,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2116639578}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.037, y: -3.82, z: 2.2095034}
+  m_LocalPosition: {x: 6.734, y: -3.82, z: 2.2095034}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1272306242}
