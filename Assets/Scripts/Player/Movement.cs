@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
     public Transform _feetPos;
     public SpriteRenderer sr;
     private Rigidbody2D _rb;
+    public GameObject _onDropDustEffect;
 
     [Header("Movement Variables")]
 
@@ -28,6 +29,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private float _airLinearDrag;
     private bool _isGrounded;
     private bool _isJumping;
+    private bool _spawnDustOnLand;
 
     [Header("Timers")]
 
@@ -52,10 +54,18 @@ public class Movement : MonoBehaviour
 
         if (_isGrounded)
         {
+            if(_spawnDustOnLand == true)
+            {
+                Instantiate(_onDropDustEffect, _feetPos.position, Quaternion.identity);
+                _spawnDustOnLand = false;
+            }
+
             _hangTimeCounter = _hangTime;
         }
         else
         {
+            _spawnDustOnLand = true;
+
             _hangTimeCounter -= Time.deltaTime;
         }
 
