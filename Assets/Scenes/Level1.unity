@@ -123,6 +123,27 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &7385460 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6495103319272696874, guid: 526cdf8ff5d1c4649ab2b4833f72e4a1, type: 3}
+  m_PrefabInstance: {fileID: 1100175100}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &7385462
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7385460}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 5c7adb58fa85ce648aca012bdcd3e2e5, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.089704275
 --- !u!1 &73909457 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6495103318432303171, guid: 526cdf8ff5d1c4649ab2b4833f72e4a1, type: 3}
@@ -1506,7 +1527,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6495103319272696913, guid: 526cdf8ff5d1c4649ab2b4833f72e4a1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 526cdf8ff5d1c4649ab2b4833f72e4a1, type: 3}
 --- !u!1001 &1208070698
 PrefabInstance:
