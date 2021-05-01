@@ -117,6 +117,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: skalka_5 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7178912847478530465, guid: e441c6f124202629091a883f6a01d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e441c6f124202629091a883f6a01d7a1, type: 3}
 --- !u!4 &3137376973689677749 stripped
@@ -186,6 +190,10 @@ PrefabInstance:
     - target: {fileID: 6159950359211884588, guid: 76896edf2e1234c4ba3a96d7121bc6e2, type: 3}
       propertyPath: m_Name
       value: skalka1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6159950359211884588, guid: 76896edf2e1234c4ba3a96d7121bc6e2, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76896edf2e1234c4ba3a96d7121bc6e2, type: 3}
@@ -257,6 +265,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: skalka_5
       objectReference: {fileID: 0}
+    - target: {fileID: 7178912847478530465, guid: e441c6f124202629091a883f6a01d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e441c6f124202629091a883f6a01d7a1, type: 3}
 --- !u!4 &3137376973722779145 stripped
@@ -327,6 +339,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: skalka_5 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7178912847478530465, guid: e441c6f124202629091a883f6a01d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e441c6f124202629091a883f6a01d7a1, type: 3}
 --- !u!4 &3137376973734200074 stripped
@@ -344,6 +360,10 @@ PrefabInstance:
     - target: {fileID: 5223800824530478662, guid: b33c7edae6fd7fd7dbafead3e14e145f, type: 3}
       propertyPath: m_Name
       value: hore_kraj_R
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223800824530478662, guid: b33c7edae6fd7fd7dbafead3e14e145f, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6361236029713527411, guid: b33c7edae6fd7fd7dbafead3e14e145f, type: 3}
       propertyPath: m_RootOrder
@@ -406,6 +426,10 @@ PrefabInstance:
     - target: {fileID: 1865776222364562600, guid: 75e83de332c2f2eec94a733e569179c6, type: 3}
       propertyPath: m_Name
       value: skalka_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865776222364562600, guid: 75e83de332c2f2eec94a733e569179c6, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4528609887675245649, guid: 75e83de332c2f2eec94a733e569179c6, type: 3}
       propertyPath: m_RootOrder
@@ -477,6 +501,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: hore
       objectReference: {fileID: 0}
+    - target: {fileID: 4564510593259437341, guid: 4cc0aaf21b952e4898479466c8821e77, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7299707107507071237, guid: 4cc0aaf21b952e4898479466c8821e77, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -538,6 +566,10 @@ PrefabInstance:
     - target: {fileID: 1865776222364562600, guid: 75e83de332c2f2eec94a733e569179c6, type: 3}
       propertyPath: m_Name
       value: skalka_3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865776222364562600, guid: 75e83de332c2f2eec94a733e569179c6, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4528609887675245649, guid: 75e83de332c2f2eec94a733e569179c6, type: 3}
       propertyPath: m_RootOrder
@@ -609,6 +641,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: skalka2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3299696631069086948, guid: 3076f4dfcc0c073068390adfb9bfae0f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6941992694318608098, guid: 3076f4dfcc0c073068390adfb9bfae0f, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -678,6 +714,10 @@ PrefabInstance:
     - target: {fileID: 3299696631069086948, guid: 3076f4dfcc0c073068390adfb9bfae0f, type: 3}
       propertyPath: m_Name
       value: skalka2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299696631069086948, guid: 3076f4dfcc0c073068390adfb9bfae0f, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6941992694318608098, guid: 3076f4dfcc0c073068390adfb9bfae0f, type: 3}
       propertyPath: m_RootOrder
@@ -801,6 +841,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: skalka_5 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7178912847478530465, guid: e441c6f124202629091a883f6a01d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e441c6f124202629091a883f6a01d7a1, type: 3}
 --- !u!4 &3137376973175114064 stripped
@@ -818,6 +862,10 @@ PrefabInstance:
     - target: {fileID: 3299696631069086948, guid: 3076f4dfcc0c073068390adfb9bfae0f, type: 3}
       propertyPath: m_Name
       value: skalka2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299696631069086948, guid: 3076f4dfcc0c073068390adfb9bfae0f, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6941992694318608098, guid: 3076f4dfcc0c073068390adfb9bfae0f, type: 3}
       propertyPath: m_RootOrder
@@ -951,6 +999,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: skalka2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3299696631069086948, guid: 3076f4dfcc0c073068390adfb9bfae0f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6941992694318608098, guid: 3076f4dfcc0c073068390adfb9bfae0f, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -1020,6 +1072,10 @@ PrefabInstance:
     - target: {fileID: 1882685109067511896, guid: 62f27d3c9e3dcbacbb2668a398540e41, type: 3}
       propertyPath: m_Name
       value: kraj_L
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882685109067511896, guid: 62f27d3c9e3dcbacbb2668a398540e41, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1882685109067511899, guid: 62f27d3c9e3dcbacbb2668a398540e41, type: 3}
       propertyPath: m_RootOrder
@@ -1135,6 +1191,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: skalka_5 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7178912847478530465, guid: e441c6f124202629091a883f6a01d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e441c6f124202629091a883f6a01d7a1, type: 3}
 --- !u!4 &3137376974298481031 stripped
@@ -1197,6 +1257,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stred
       objectReference: {fileID: 0}
+    - target: {fileID: 7267299470091260573, guid: 4474beacbf83ca0828eddbb4eade9b9b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4474beacbf83ca0828eddbb4eade9b9b, type: 3}
 --- !u!4 &8136416874176849661 stripped
@@ -1214,6 +1278,10 @@ PrefabInstance:
     - target: {fileID: 1449822580147344640, guid: 02ff60547cb62caa7a0a47a7bf6bb529, type: 3}
       propertyPath: m_Name
       value: skalka_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1449822580147344640, guid: 02ff60547cb62caa7a0a47a7bf6bb529, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1860108583023008541, guid: 02ff60547cb62caa7a0a47a7bf6bb529, type: 3}
       propertyPath: m_RootOrder
@@ -1329,6 +1397,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: hore_L
       objectReference: {fileID: 0}
+    - target: {fileID: 8104099381300403711, guid: 3c24e7103cb2c62efb540f5ed215d916, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c24e7103cb2c62efb540f5ed215d916, type: 3}
 --- !u!4 &4696210947461601405 stripped
@@ -1390,6 +1462,10 @@ PrefabInstance:
     - target: {fileID: 7537055006272847842, guid: 87395f2f00809c8128102241e988b631, type: 3}
       propertyPath: m_Name
       value: spodok
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537055006272847842, guid: 87395f2f00809c8128102241e988b631, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87395f2f00809c8128102241e988b631, type: 3}
@@ -1461,6 +1537,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: skalka_5 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7178912847478530465, guid: e441c6f124202629091a883f6a01d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e441c6f124202629091a883f6a01d7a1, type: 3}
 --- !u!4 &3137376974514583231 stripped
@@ -1478,6 +1558,10 @@ PrefabInstance:
     - target: {fileID: 3288786915634402030, guid: bdb2194fe5c5ca6f9a31adc57709f89a, type: 3}
       propertyPath: m_Name
       value: hore_mensi
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288786915634402030, guid: bdb2194fe5c5ca6f9a31adc57709f89a, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6332378848310779933, guid: bdb2194fe5c5ca6f9a31adc57709f89a, type: 3}
       propertyPath: m_RootOrder
@@ -1601,6 +1685,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: hore_maly
       objectReference: {fileID: 0}
+    - target: {fileID: 4427165224422900018, guid: 4418b9137ce34209ab09fe6fcb193b8b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4418b9137ce34209ab09fe6fcb193b8b, type: 3}
 --- !u!4 &4248860738327960237 stripped
@@ -1618,6 +1706,10 @@ PrefabInstance:
     - target: {fileID: 1865776222364562600, guid: 75e83de332c2f2eec94a733e569179c6, type: 3}
       propertyPath: m_Name
       value: skalka_3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865776222364562600, guid: 75e83de332c2f2eec94a733e569179c6, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4528609887675245649, guid: 75e83de332c2f2eec94a733e569179c6, type: 3}
       propertyPath: m_RootOrder

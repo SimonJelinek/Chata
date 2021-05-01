@@ -595,7 +595,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 141999781}
   offset: {x: 0, y: 1.19, z: 0}
-  t: 1
+  lookAheadAmount: {x: 0, y: 0, z: 0}
+  speed: 0
 --- !u!114 &522709242 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6495103318161649183, guid: 526cdf8ff5d1c4649ab2b4833f72e4a1, type: 3}
