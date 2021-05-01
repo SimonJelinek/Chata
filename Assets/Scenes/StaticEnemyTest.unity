@@ -303,7 +303,7 @@ Transform:
   m_LocalScale: {x: 7.909026, y: 7.909026, z: 7.909026}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &525751450
 GameObject:
@@ -403,7 +403,7 @@ Transform:
   m_LocalScale: {x: 11.631782, y: 11.631782, z: 11.631782}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &729307337
 GameObject:
@@ -486,7 +486,7 @@ Transform:
   m_LocalScale: {x: 10.609812, y: 10.609812, z: 10.609812}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &729307340
 MonoBehaviour:
@@ -507,7 +507,7 @@ MonoBehaviour:
   bulletSpace: 1
   xBulletSpawnPos: 4
   yBulletSpawnPos: 0.19
---- !u!1001 &1454942320365346568
+--- !u!1001 &1650740803
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -518,13 +518,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: MapHolder
       objectReference: {fileID: 0}
-    - target: {fileID: 1454942318657595038, guid: bb9aedc6acf6237f386aea0dfd44f099, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1454942318657595039, guid: bb9aedc6acf6237f386aea0dfd44f099, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1454942318657595039, guid: bb9aedc6acf6237f386aea0dfd44f099, type: 3}
       propertyPath: m_LocalPosition.x
