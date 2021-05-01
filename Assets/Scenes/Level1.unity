@@ -123,27 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &7385460 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6495103319272696874, guid: 526cdf8ff5d1c4649ab2b4833f72e4a1, type: 3}
-  m_PrefabInstance: {fileID: 1100175100}
-  m_PrefabAsset: {fileID: 0}
---- !u!58 &7385462
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7385460}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 5c7adb58fa85ce648aca012bdcd3e2e5, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.089704275
 --- !u!1 &73909457 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6495103318432303171, guid: 526cdf8ff5d1c4649ab2b4833f72e4a1, type: 3}
@@ -481,7 +460,6 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
-  - component: {fileID: 519420033}
   - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
@@ -568,40 +546,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &519420033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShowDebugText: 0
-  m_ShowCameraFrustum: 1
-  m_IgnoreTimeScale: 0
-  m_WorldUpOverride: {fileID: 0}
-  m_UpdateMethod: 2
-  m_BlendUpdateMethod: 1
-  m_DefaultBlend:
-    m_Style: 1
-    m_Time: 2
-    m_CustomCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-  m_CustomBlends: {fileID: 0}
-  m_CameraCutEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_CameraActivatedEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -615,9 +559,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 141999781}
-  offset: {x: 3.5, y: 1.19, z: 0}
-  lookAheadAmount: {x: 0, y: 0, z: 0}
-  speed: 1
+  offset: {x: 0, y: 0.75, z: 0}
+  lookAheadAmount: {x: 3.2, y: 0, z: 0}
+  speed: 1.6
 --- !u!114 &522709242 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6495103318161649183, guid: 526cdf8ff5d1c4649ab2b4833f72e4a1, type: 3}
@@ -1464,17 +1408,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1417882349}
     - target: {fileID: 6495103318215213300, guid: 526cdf8ff5d1c4649ab2b4833f72e4a1, type: 3}
-      propertyPath: _timeBetweenShots
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 6495103318215213300, guid: 526cdf8ff5d1c4649ab2b4833f72e4a1, type: 3}
       propertyPath: _ammunitionDisplay
       value: 
       objectReference: {fileID: 1417882349}
-    - target: {fileID: 6495103319140655902, guid: 526cdf8ff5d1c4649ab2b4833f72e4a1, type: 3}
-      propertyPath: _allowButtonHold
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6495103319140655902, guid: 526cdf8ff5d1c4649ab2b4833f72e4a1, type: 3}
       propertyPath: _ammunitionDisplay
       value: 
@@ -1527,8 +1463,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6495103319272696913, guid: 526cdf8ff5d1c4649ab2b4833f72e4a1, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 526cdf8ff5d1c4649ab2b4833f72e4a1, type: 3}
 --- !u!1001 &1208070698
 PrefabInstance:
