@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Bullet
   - Ammo
+  - EnemyBullet
+  - Enemy
+  - Explosion
   layers:
   - Default
   - TransparentFX
@@ -18,8 +21,8 @@ TagManager:
   - Ground
   - Player
   - Bullet
-  - 
-  - 
+  - EnemyBullet
+  - Enemy
   - 
   - 
   - 
