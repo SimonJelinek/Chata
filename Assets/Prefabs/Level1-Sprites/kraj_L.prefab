@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1882685109067511897}
   m_Layer: 0
   m_Name: kraj_L
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
