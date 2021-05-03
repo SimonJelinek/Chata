@@ -2,14 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class EnemyBullet : MonoBehaviour
 {
+    [Header("Components")]
+    GameObject _target;
+    Rigidbody2D _rb;
+
+    [Header("EnemyBulletVariables")]
+    [SerializeField] float _speed;
     float time;
-    float destroyTime = 3;
+    float destroyTime = 2;
     bool timer = false;
 
     void Start()
     {
+        _rb = GetComponent<Rigidbody2D>();
+        _target = GameObject.FindGameObjectWithTag("Player");
+        Vector2 _moveDir = (_target.transform.position - transform.position).normalized * _speed;
+        _rb.velocity = new Vector2(_moveDir.x, _moveDir.y);
+
         timer = true;
     }
 
@@ -28,9 +39,9 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Ammo") || collision.CompareTag("Explosion"))
+        if (collision.CompareTag("Ammo"))
         {
-            
+
         }
         else
         {
