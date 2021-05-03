@@ -6,12 +6,53 @@ public class CameraFollow : MonoBehaviour
 {
     public Transform target;
     public Vector3 offset;
+    public Vector3 lookAheadAmount;
+    [Range(0, 10f)]
+    public float speed;
 
-    [Range(0, 1f)]
-    public float t;
+    private int direction;
+    private Vector3 mousePos;
 
-    void Update()
+
+    void Start()
     {
-        transform.position = Vector3.Lerp(transform.position, new Vector3(target.position.x, target.position.y, transform.position.z) + offset, t);
+        offset.y = 0.75f;
+        lookAheadAmount.x = 3.2f;
+        speed = 1.6f;
     }
+
+    private void Update()
+    {   
+        mousePos = GetComponent<Camera>().ScreenToWorldPoint(Input.mousePosition);
+
+        if(mousePos.x > target.position.x)
+        {
+            direction = 1;
+        }
+        if(mousePos.x < target.position.x)
+        {
+            direction = -1;
+        }
+        
+    }
+
+    void FixedUpdate()
+    {
+        transform.position = Vector3.Lerp(transform.position, new Vector3(target.position.x, target.position.y, transform.position.z) + offset + (lookAheadAmount * direction), speed * Time.fixedDeltaTime);
+
+        /*
+         
+        if(Input.GetAxis("Horizontal") > 0)
+        {
+            direction = 1;
+        }
+        if(Input.GetAxis("Horizontal") < 0)
+        {
+            direction = -1;
+        }
+
+        */
+    }
+
+
 }
