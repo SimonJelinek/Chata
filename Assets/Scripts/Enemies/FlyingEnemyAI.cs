@@ -7,14 +7,22 @@ public class FlyingEnemyAI : MonoBehaviour
     [Header("Components")]
     public GameObject _bullet;
     public GameObject _firePoint;
+    public Transform[] _moveSpots;
 
     [Header("Enemy Variables")]
     [SerializeField] private float _nextFireTime;
     [SerializeField] private float _fireRate;
     [SerializeField] private float _enemySpeed;
+    [SerializeField] private float _enemySpeedPatroling;
     [SerializeField] private float _lineOfSight;
     [SerializeField] private float _shootingRange;
+    [SerializeField] private float _startWaitTime;
+    private int _randomSpot;
     private Transform _player;
+    private bool _inSight = false;
+    private bool following = false;
+    private float _waitTime;
+    
     
     [Header("Health")]
     [SerializeField] private float _maxHealth;
@@ -25,6 +33,9 @@ public class FlyingEnemyAI : MonoBehaviour
 
     void Start()
     {
+        _randomSpot = Random.Range(0, _moveSpots.Length);
+        _waitTime = _startWaitTime;
+
         _sr = GetComponent<SpriteRenderer>();
         //_flashMat = Resources.Load("Flash", typeof(Material)) as Material;
         _defMat = _sr.material;
@@ -34,22 +45,32 @@ public class FlyingEnemyAI : MonoBehaviour
     }
 
     void Update()
-    {
-        float _distanceFromPlayer = Vector2.Distance(_player.position, transform.position);
+    { 
 
-        if(_distanceFromPlayer < _lineOfSight && _distanceFromPlayer > _shootingRange)
+        RaycastHit2D hit = Physics2D.Linecast(gameObject.transform.position, _player.transform.position, 1 << LayerMask.NameToLayer("Ground"));
+
+        if (following == false)
         {
-            transform.position = Vector2.MoveTowards(this.transform.position, _player.position, _enemySpeed * Time.deltaTime);
-            _lineOfSight = 11;
+            if (hit.collider == null)
+            {
+                _inSight = true;
+                Debug.Log("Player in sight");
+            }
+            else
+            {
+                if (hit.collider.gameObject.layer == 8)
+                {
+                    _inSight = false;
+                    Debug.Log("Hit wall");
+                }
+            }
+            Patroling();
         }
-        else if (_distanceFromPlayer <= _shootingRange && _nextFireTime < Time.time)
+
+        if (_inSight == true)
         {
-            Instantiate(_bullet, _firePoint.transform.position, Quaternion.identity);
-            _nextFireTime = Time.time + _fireRate;
-        }
-        else
-        {
-            _lineOfSight = 7;
+            following = true;
+            Spotted();
         }
 
         if(_health <= 0)
@@ -64,6 +85,45 @@ public class FlyingEnemyAI : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, _lineOfSight);
         Gizmos.DrawWireSphere(transform.position, _shootingRange);
+    }
+
+    private void Spotted()
+    {
+        float _distanceFromPlayer = Vector2.Distance(_player.position, transform.position);
+
+        if (_distanceFromPlayer < _lineOfSight && _distanceFromPlayer > _shootingRange)
+        {
+            transform.position = Vector2.MoveTowards(this.transform.position, _player.position, _enemySpeed * Time.deltaTime);
+            _lineOfSight = 11;
+        }
+        else if (_distanceFromPlayer <= _shootingRange && _nextFireTime < Time.time)
+        {
+            Instantiate(_bullet, _firePoint.transform.position, Quaternion.identity);
+            _nextFireTime = Time.time + _fireRate;
+        }
+        else
+        {
+            following = false;
+            _lineOfSight = 7;
+        }
+    }
+
+    private void Patroling()
+    {
+        transform.position = Vector2.MoveTowards(transform.position, _moveSpots[_randomSpot].position, _enemySpeedPatroling * Time.deltaTime);
+
+        if(Vector2.Distance(transform.position, _moveSpots[_randomSpot].position) < 0.2f)
+        {
+            if(_waitTime <= 0)
+            {
+                _randomSpot = Random.Range(0, _moveSpots.Length);
+                _waitTime = _startWaitTime;
+            }
+            else
+            {
+                _waitTime -= Time.deltaTime;
+            }
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

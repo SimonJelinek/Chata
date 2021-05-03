@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4815734511853250314}
   - component: {fileID: 4815734511853250315}
   - component: {fileID: 4815734511853250316}
+  - component: {fileID: 1349318213}
   m_Layer: 12
   m_Name: Flying Enemy
   m_TagString: Enemy
@@ -99,12 +100,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bullet: {fileID: 5168333461257911401, guid: fdbbf127ee16613498f3f0b85bf68c26, type: 3}
   _firePoint: {fileID: 4815734513201534246}
+  _moveSpots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _nextFireTime: 0
   _fireRate: 1.5
   _enemySpeed: 2
+  _enemySpeedPatroling: 1.5
   _lineOfSight: 7
   _shootingRange: 2.5
-  _maxHealth: 2
+  _startWaitTime: 2
+  _maxHealth: 10
   _flashMat: {fileID: 2100000, guid: d6d03618cbbdd0e47bf6e5134e19b6a1, type: 2}
 --- !u!61 &4815734511853250316
 BoxCollider2D:
@@ -132,6 +142,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 0.2}
   m_EdgeRadius: 0
+--- !u!50 &1349318213
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4815734511853250312}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 10
+  m_LinearDrag: 5
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &4815734513201534246
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +187,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4815734513201534246}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.019, y: 0.007, z: 0}
+  m_LocalPosition: {x: -0, y: 0.001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4815734511853250317}
