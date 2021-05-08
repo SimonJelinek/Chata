@@ -341,6 +341,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 206928091}
+  - component: {fileID: 206928092}
   m_Layer: 0
   m_Name: Checkpoint2
   m_TagString: Checkpoint2
@@ -356,12 +357,38 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206928090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.7, y: -2.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1820736704}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &206928092
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206928090}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.037029743, y: 1.2638464}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.07424641, y: 3.5276928}
+  m_EdgeRadius: 0
 --- !u!1 &219144561
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,6 +1056,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 868477131}
+  - component: {fileID: 868477132}
   m_Layer: 0
   m_Name: Checkpoint3
   m_TagString: Checkpoint3
@@ -1044,12 +1072,38 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 868477130}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.81, y: 9.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1820736704}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &868477132
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868477130}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.38586152, y: 1.0804138}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.22827697, y: 3.469513}
+  m_EdgeRadius: 0
 --- !u!224 &930536408 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6157648826802045164, guid: ec8f90a7ae55c8e43bf5ab7f2a083f11, type: 3}
@@ -1196,6 +1250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eea3e4e2af30fb4e9e5f9d87a61172b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkPoint: {x: 0, y: 0}
 --- !u!1 &1115734163
 GameObject:
   m_ObjectHideFlags: 0
@@ -1997,7 +2052,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.23407423, y: 1.5893219}
@@ -2373,11 +2428,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1264971188315353782, guid: e6dfb27ffb5b4c64d9e7c478eadba4a0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.54
+      value: -18.7
       objectReference: {fileID: 0}
     - target: {fileID: 1264971188315353782, guid: e6dfb27ffb5b4c64d9e7c478eadba4a0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.21
+      value: -11.2
       objectReference: {fileID: 0}
     - target: {fileID: 1264971188315353782, guid: e6dfb27ffb5b4c64d9e7c478eadba4a0, type: 3}
       propertyPath: m_LocalPosition.z
