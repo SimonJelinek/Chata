@@ -10,7 +10,7 @@ public class Shooting : MonoBehaviour
     public Transform _firePoint;
     public GameObject _bulletPrefab;
     public TextMeshProUGUI _ammunitionDisplay;
-   // public TextMeshProUGUI _reloadingText;
+    public TextMeshProUGUI _reloadingText;
 
     [Header("Weapon Types")]
 
@@ -67,7 +67,7 @@ public class Shooting : MonoBehaviour
             _ammunitionDisplay.SetText(_bulletsLeft / _bulletsPerTap + " / " + _allBullets / _bulletsPerTap);
         }
 
-        /*if(_reloading)
+        if(_reloading)
         {
             _reloadingText.gameObject.SetActive(true);
             Debug.Log("reloading is true");
@@ -76,7 +76,7 @@ public class Shooting : MonoBehaviour
         {
             _reloadingText.gameObject.SetActive(false);
             Debug.Log("reloading is false");
-        }*/
+        }
 
 
     }
