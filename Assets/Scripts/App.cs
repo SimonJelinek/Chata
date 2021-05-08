@@ -2,4 +2,5 @@
 {
     public static GameManager gameManager;
     public static ScreenManager screenManager;
+    public Checkpoints checkpoints;
 }
