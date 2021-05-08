@@ -9,6 +9,9 @@ public class StaticEnemy : MonoBehaviour
     public float hitDistance; 
     public float bulletSpawnTime;
     public float bulletSpace; // medzera medzi nábojmi
+    public GameObject firePoint;
+    public Transform player;
+    public float attackRange;
 
     float time;
 
@@ -17,7 +20,10 @@ public class StaticEnemy : MonoBehaviour
 
     float xPos;
     bool shooting = false;
-
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
     void Update()
     {
         if (shooting)
@@ -30,7 +36,7 @@ public class StaticEnemy : MonoBehaviour
 
                 for (int x = 0; x < numberOfBullets; x++)
                 {
-                    Instantiate(staticEnemyBullet, new Vector2(xPos, yBulletSpawnPos), Quaternion.identity);
+                    Instantiate(staticEnemyBullet, firePoint.transform.position, Quaternion.identity);
                     xPos -= bulletSpace;
                 }
                 time = 0;
@@ -40,7 +46,20 @@ public class StaticEnemy : MonoBehaviour
 
     void FixedUpdate()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.left, hitDistance);
+        float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
+
+        if (distanceFromPlayer <= attackRange)
+        {
+            shooting = true;
+        }else
+        {
+            shooting = false;
+        }
+
+
+
+
+      /*  RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.left, hitDistance);
 
         if (hit.collider!=null && hit.collider.CompareTag("Player"))
         {
@@ -51,6 +70,12 @@ public class StaticEnemy : MonoBehaviour
             shooting = false;
         }
 
-        Debug.DrawRay(transform.position, Vector2.left * hitDistance, Color.red);
+        Debug.DrawRay(transform.position, Vector2.left * hitDistance, Color.red);*/
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 }
