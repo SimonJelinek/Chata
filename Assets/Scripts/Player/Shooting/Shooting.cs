@@ -70,12 +70,10 @@ public class Shooting : MonoBehaviour
         if(_reloading)
         {
             _reloadingText.gameObject.SetActive(true);
-            Debug.Log("reloading is true");
         } 
         else
         {
             _reloadingText.gameObject.SetActive(false);
-            Debug.Log("reloading is false");
         }
 
 
