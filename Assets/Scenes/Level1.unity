@@ -1968,6 +1968,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6943230084950693482, guid: b8136232d8ab70b418fb212be2e4d6ad, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6943230085127473873, guid: b8136232d8ab70b418fb212be2e4d6ad, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6943230085547867480, guid: b8136232d8ab70b418fb212be2e4d6ad, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6943230085588995675, guid: b8136232d8ab70b418fb212be2e4d6ad, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6943230085617392552, guid: b8136232d8ab70b418fb212be2e4d6ad, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6943230085928331023, guid: b8136232d8ab70b418fb212be2e4d6ad, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6943230085997534342, guid: b8136232d8ab70b418fb212be2e4d6ad, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7572999417778884808, guid: b8136232d8ab70b418fb212be2e4d6ad, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2015,6 +2043,34 @@ PrefabInstance:
     - target: {fileID: 7572999417778884809, guid: b8136232d8ab70b418fb212be2e4d6ad, type: 3}
       propertyPath: m_Name
       value: MapHolder-Fixed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8827178299484213682, guid: b8136232d8ab70b418fb212be2e4d6ad, type: 3}
+      propertyPath: m_TagString
+      value: Lava
+      objectReference: {fileID: 0}
+    - target: {fileID: 8827178300512248023, guid: b8136232d8ab70b418fb212be2e4d6ad, type: 3}
+      propertyPath: m_TagString
+      value: Lava
+      objectReference: {fileID: 0}
+    - target: {fileID: 8827178300581452638, guid: b8136232d8ab70b418fb212be2e4d6ad, type: 3}
+      propertyPath: m_TagString
+      value: Lava
+      objectReference: {fileID: 0}
+    - target: {fileID: 8827178300785134857, guid: b8136232d8ab70b418fb212be2e4d6ad, type: 3}
+      propertyPath: m_TagString
+      value: Lava
+      objectReference: {fileID: 0}
+    - target: {fileID: 8827178300869917312, guid: b8136232d8ab70b418fb212be2e4d6ad, type: 3}
+      propertyPath: m_TagString
+      value: Lava
+      objectReference: {fileID: 0}
+    - target: {fileID: 8827178300956089456, guid: b8136232d8ab70b418fb212be2e4d6ad, type: 3}
+      propertyPath: m_TagString
+      value: Lava
+      objectReference: {fileID: 0}
+    - target: {fileID: 8827178300994996611, guid: b8136232d8ab70b418fb212be2e4d6ad, type: 3}
+      propertyPath: m_TagString
+      value: Lava
       objectReference: {fileID: 0}
     - target: {fileID: 9018542417994258088, guid: b8136232d8ab70b418fb212be2e4d6ad, type: 3}
       propertyPath: m_LocalPosition.x

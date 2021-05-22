@@ -57,11 +57,15 @@ public class PlayerHealth : MonoBehaviour
                 Invoke("ResetMaterial", 0.1f);
             }
         }
+
+        if (collision.gameObject.tag == "Lava")
+        {
+            Debug.Log("Au");
+        }
     }
 
     private void ResetMaterial()
     {
         _sr.material = _defMat;
     }
-
 }

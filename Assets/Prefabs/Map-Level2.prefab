@@ -1,5 +1,168 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1525748269
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1525748270}
+  - component: {fileID: 1525748272}
+  - component: {fileID: 1525748271}
+  m_Layer: 8
+  m_Name: skala5 (1)
+  m_TagString: Ground
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1525748270
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525748269}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.34, y: -17.16, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7209969463367513288}
+  m_RootOrder: 34
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1525748272
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525748269}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 3a551e110330c6c46ad67e9a107babb1, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3.12, y: 1.36}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!60 &1525748271
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525748269}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.12, y: 1.36}
+    newSize: {x: 3.12, y: 1.36}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.1368595, y: -0.13383926}
+      - {x: 1.1443872, y: -0.1310978}
+      - {x: 1.1466122, y: -0.13332272}
+      - {x: 1.148838, y: -0.13109684}
+      - {x: 1.3001852, y: 0.030808449}
+      - {x: 1.3133984, y: 0.039133072}
+      - {x: 1.315752, y: 0.03676319}
+      - {x: 1.3127937, y: 0.03260994}
+      - {x: 1.3069668, y: 0.031665802}
+      - {x: 1.2803688, y: 0.009192467}
+      - {x: 1.3002243, y: 0.023605347}
+      - {x: 1.3057451, y: 0.028680801}
+      - {x: 1.3083365, y: 0.028769035}
+      - {x: 1.3134346, y: 0.0300951}
+      - {x: 1.3186207, y: 0.040961266}
+      - {x: 1.4393774, y: 0.1781985}
+      - {x: 1.4754109, y: 0.21541092}
+      - {x: 1.4416484, y: 0.22470783}
+      - {x: 1.2677958, y: 0.29082257}
+      - {x: 1.0306997, y: 0.38595963}
+      - {x: 1.0257888, y: 0.39456478}
+      - {x: 0.8570109, y: 0.40263548}
+      - {x: 0.63508165, y: 0.41263548}
+      - {x: 0.41929376, y: 0.41684765}
+      - {x: 0.17565192, y: 0.43026847}
+      - {x: -0.058428608, y: 0.44224066}
+      - {x: -0.29026753, y: 0.44829437}
+      - {x: -0.5061879, y: 0.45829436}
+      - {x: -0.74423647, y: 0.47159788}
+      - {x: -0.9467077, y: 0.47952175}
+      - {x: -0.98975825, y: 0.48343754}
+      - {x: -1.1924888, y: 0.479908}
+      - {x: -1.2445381, y: 0.42453712}
+      - {x: -1.4374223, y: 0.2026543}
+      - {x: -1.4535036, y: 0.1781044}
+      - {x: -1.4800074, y: 0.1500074}
+      - {x: -1.4715989, y: 0.13816036}
+      - {x: -1.3700148, y: 0.0049888995}
+      - {x: -1.3350185, y: -0.027509727}
+      - {x: -1.1400222, y: -0.08000644}
+      - {x: -0.9225125, y: -0.14000739}
+      - {x: -0.81502587, y: -0.16501014}
+      - {x: -0.33249027, y: -0.2950185}
+      - {x: -0.14129066, y: -0.3520155}
+      - {x: -0.08228668, y: -0.36917555}
+      - {x: -0.07235336, y: -0.37460804}
+      - {x: -0.052886963, y: -0.37053394}
+      - {x: 0.024017297, y: -0.34680712}
+      - {x: 0.14630748, y: -0.32437623}
+      - {x: 0.28232166, y: -0.3010655}
+      - {x: 0.38342285, y: -0.28490448}
+      - {x: 0.39294624, y: -0.28259373}
+      - {x: 0.4260521, y: -0.27620983}
+      - {x: 0.74883866, y: -0.20441982}
+      - {x: 1.0388715, y: -0.152193}
 --- !u!1 &7209969461840500810
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,9 +174,9 @@ GameObject:
   - component: {fileID: 7209969461840500811}
   - component: {fileID: 7209969461840500809}
   - component: {fileID: 7209969461840500808}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: "voz\xEDk dole2"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,8 +189,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7209969461840500810}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 34.62, y: -17.77, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 34.75, y: -18.25, z: 0}
+  m_LocalScale: {x: 0.5706081, y: 0.5706081, z: 1}
   m_Children: []
   m_Father: {fileID: 7209969463367513288}
   m_RootOrder: 18
@@ -306,9 +469,9 @@ GameObject:
   - component: {fileID: 7209969461913487706}
   - component: {fileID: 7209969461913487709}
   - component: {fileID: 7209969461913487707}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: skala2
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -321,7 +484,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7209969461913487708}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.88, y: -19.52, z: 0}
+  m_LocalPosition: {x: -7.88, y: -20.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7209969463367513288}
@@ -532,9 +695,9 @@ GameObject:
   - component: {fileID: 7209969462115660144}
   - component: {fileID: 7209969462115660147}
   - component: {fileID: 7209969462115660145}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: skala10
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1102,9 +1265,9 @@ GameObject:
   - component: {fileID: 7209969462236911345}
   - component: {fileID: 7209969462236911310}
   - component: {fileID: 7209969462236911311}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: skala13
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1478,9 +1641,9 @@ GameObject:
   - component: {fileID: 7209969462271165450}
   - component: {fileID: 7209969462271165453}
   - component: {fileID: 7209969462271165451}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: skala4
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2624,9 +2787,9 @@ GameObject:
   - component: {fileID: 7209969462544331130}
   - component: {fileID: 7209969462544331133}
   - component: {fileID: 7209969462544331131}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: skala3
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2639,7 +2802,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7209969462544331132}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.14, y: -16.942936, z: 0}
+  m_LocalPosition: {x: -10.31, y: -18.47, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7209969463367513288}
@@ -2754,9 +2917,9 @@ GameObject:
   - component: {fileID: 7209969462545199872}
   - component: {fileID: 7209969462545199875}
   - component: {fileID: 7209969462545199873}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: skala5
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2917,9 +3080,9 @@ GameObject:
   - component: {fileID: 7209969462631642932}
   - component: {fileID: 7209969462631642935}
   - component: {fileID: 7209969462631642934}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: "voz\xEDk hore"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2932,8 +3095,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7209969462631642937}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.36, y: 12.98, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 26.82, y: 12.48, z: 0}
+  m_LocalScale: {x: 0.5706081, y: 0.5706081, z: 1}
   m_Children: []
   m_Father: {fileID: 7209969463367513288}
   m_RootOrder: 20
@@ -3135,9 +3298,9 @@ GameObject:
   - component: {fileID: 7209969462681436403}
   - component: {fileID: 7209969462681436402}
   - component: {fileID: 7209969462681436400}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: skala7
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3796,9 +3959,9 @@ GameObject:
   - component: {fileID: 7209969462942596433}
   - component: {fileID: 7209969462942596782}
   - component: {fileID: 7209969462942596783}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: skala8
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4347,9 +4510,9 @@ GameObject:
   - component: {fileID: 7209969463024078393}
   - component: {fileID: 7209969463024078391}
   - component: {fileID: 7209969463024078390}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: "voz\xEDk dole1"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4362,8 +4525,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7209969463024078392}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.74, y: -20.3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -19.6, y: -21.1, z: 0}
+  m_LocalScale: {x: 0.5706081, y: 0.5706081, z: 0.5706081}
   m_Children: []
   m_Father: {fileID: 7209969463367513288}
   m_RootOrder: 17
@@ -4580,9 +4743,9 @@ GameObject:
   - component: {fileID: 7209969463131599309}
   - component: {fileID: 7209969463131599306}
   - component: {fileID: 7209969463131599307}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: skala9
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5074,9 +5237,9 @@ GameObject:
   - component: {fileID: 7209969463181415180}
   - component: {fileID: 7209969463181415181}
   - component: {fileID: 7209969463181415178}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: skala1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5265,9 +5428,9 @@ GameObject:
   - component: {fileID: 7209969463257481337}
   - component: {fileID: 7209969463257481336}
   - component: {fileID: 7209969463257481334}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: skala6
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5742,6 +5905,7 @@ Transform:
   - {fileID: 7209969462303271637}
   - {fileID: 7209969463006289222}
   - {fileID: 7209969462208179713}
+  - {fileID: 1525748270}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5756,9 +5920,9 @@ GameObject:
   - component: {fileID: 7209969463377527248}
   - component: {fileID: 7209969463377527249}
   - component: {fileID: 7209969463377527086}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: skala12
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6342,9 +6506,9 @@ GameObject:
   - component: {fileID: 7209969463502492509}
   - component: {fileID: 7209969463502492507}
   - component: {fileID: 7209969463502492506}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: "voz\xEDk v strede"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6357,8 +6521,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7209969463502492508}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.99, y: 5.13, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -14.02, y: 4.83, z: 0}
+  m_LocalScale: {x: 0.5706081, y: 0.5706081, z: 1}
   m_Children: []
   m_Father: {fileID: 7209969463367513288}
   m_RootOrder: 19
@@ -6524,9 +6688,9 @@ GameObject:
   - component: {fileID: 7209969463592855232}
   - component: {fileID: 7209969463592855235}
   - component: {fileID: 7209969463592855233}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: "voz\xEDky vlavo dole"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6539,8 +6703,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7209969463592855234}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -38.25, y: -19.64, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -38.97, y: -20.6, z: 0}
+  m_LocalScale: {x: 0.5706081, y: 0.5706081, z: 1}
   m_Children: []
   m_Father: {fileID: 7209969463367513288}
   m_RootOrder: 16
@@ -6727,9 +6891,9 @@ GameObject:
   - component: {fileID: 7209969463764391934}
   - component: {fileID: 7209969463764391935}
   - component: {fileID: 7209969463764391932}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: skala11
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

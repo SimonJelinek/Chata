@@ -13,6 +13,7 @@ TagManager:
   - Checkpoint1
   - Checkpoint2
   - Checkpoint3
+  - Lava
   layers:
   - Default
   - TransparentFX
