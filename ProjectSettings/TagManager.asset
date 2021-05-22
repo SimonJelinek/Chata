@@ -10,9 +10,8 @@ TagManager:
   - Enemy
   - Explosion
   - Ground
-  - Checkpoint1
-  - Checkpoint2
-  - Checkpoint3
+  - Lava
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

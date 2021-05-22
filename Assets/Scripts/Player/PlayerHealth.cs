@@ -15,6 +15,11 @@ public class PlayerHealth : MonoBehaviour
     private Material _defMat;
     private SpriteRenderer _sr;
 
+    void Awake()
+    {
+        App.playerHealth = this;
+    }
+
     void Start()
     {
         _sr = GetComponent<SpriteRenderer>();
@@ -52,6 +57,11 @@ public class PlayerHealth : MonoBehaviour
                 Invoke("ResetMaterial", 0.1f);
             }
         }
+
+        if (collision.gameObject.tag == "Lava")
+        {
+            LavaTrigger();
+        }
     }
 
     private void ResetMaterial()
@@ -59,4 +69,17 @@ public class PlayerHealth : MonoBehaviour
         _sr.material = _defMat;
     }
 
+    void UpdateTxt()
+    {
+        _healthUI.text = _healthCount.ToString();
+    }
+
+    void LavaTrigger()
+    {
+        _healthCount -= 2;
+        UpdateTxt();
+        gameObject.SetActive(false);
+        transform.position = App.checkpoints.checkPoint;
+        gameObject.SetActive(true);
+    }
 }
