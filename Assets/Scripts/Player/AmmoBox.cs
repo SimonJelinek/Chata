@@ -6,10 +6,9 @@ public class AmmoBox : MonoBehaviour
 {
     public Shooting ammo;
 
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             ammo._allBullets += 10;
             Destroy(gameObject);
