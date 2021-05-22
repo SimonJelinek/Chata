@@ -18,7 +18,7 @@ public class CameraFollow : MonoBehaviour
     {
         offset.y = 0.75f;
         lookAheadAmount.x = 3.2f;
-        speed = 1.6f;
+        //speed = 1.6f;
     }
 
     private void Update()
