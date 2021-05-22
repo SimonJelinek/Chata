@@ -60,12 +60,26 @@ public class PlayerHealth : MonoBehaviour
 
         if (collision.gameObject.tag == "Lava")
         {
-            Debug.Log("Au");
+            LavaTrigger();
         }
     }
 
     private void ResetMaterial()
     {
         _sr.material = _defMat;
+    }
+
+    void UpdateTxt()
+    {
+        _healthUI.text = _healthCount.ToString();
+    }
+
+    void LavaTrigger()
+    {
+        _healthCount -= 2;
+        UpdateTxt();
+        gameObject.SetActive(false);
+        transform.position = App.checkpoints.checkPoint;
+        gameObject.SetActive(true);
     }
 }
