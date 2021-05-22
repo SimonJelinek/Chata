@@ -58,7 +58,7 @@ public class PlayerHealth : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.tag == "Lava")
+        if (collision.gameObject.CompareTag("Lava"))
         {
             LavaTrigger();
         }
@@ -69,15 +69,9 @@ public class PlayerHealth : MonoBehaviour
         _sr.material = _defMat;
     }
 
-    void UpdateTxt()
-    {
-        _healthUI.text = _healthCount.ToString();
-    }
-
     void LavaTrigger()
     {
         _healthCount -= 2;
-        UpdateTxt();
         gameObject.SetActive(false);
         transform.position = App.checkpoints.checkPoint;
         gameObject.SetActive(true);
