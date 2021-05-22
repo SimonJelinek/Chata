@@ -98,6 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9274ea879b4a5f7429c62e1c86bb4948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 10
+  rifleAmmoBox: {fileID: 5426684245778898564, guid: be97423f3462d554480d5b40d3cc5ee3, type: 3}
+  shotgunAmmoBox: {fileID: 1206988941485492470, guid: ba23705e32eaa8f4ea5904f80b60bf71, type: 3}
   _bullet: {fileID: 5168333461257911401, guid: fdbbf127ee16613498f3f0b85bf68c26, type: 3}
   _firePoint: {fileID: 4815734513201534246}
   _moveSpots:
@@ -114,7 +117,6 @@ MonoBehaviour:
   _lineOfSight: 7
   _shootingRange: 2.5
   _startWaitTime: 2
-  _maxHealth: 10
   _flashMat: {fileID: 2100000, guid: d6d03618cbbdd0e47bf6e5134e19b6a1, type: 2}
 --- !u!61 &4815734511853250316
 BoxCollider2D:
