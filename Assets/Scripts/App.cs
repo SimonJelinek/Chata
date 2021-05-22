@@ -2,5 +2,6 @@
 {
     public static GameManager gameManager;
     public static ScreenManager screenManager;
-    public Checkpoints checkpoints;
+    public static Checkpoints checkpoints;
+    public static PlayerHealth playerHealth;
 }

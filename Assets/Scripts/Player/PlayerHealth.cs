@@ -15,6 +15,11 @@ public class PlayerHealth : MonoBehaviour
     private Material _defMat;
     private SpriteRenderer _sr;
 
+    void Awake()
+    {
+        App.playerHealth = this;
+    }
+
     void Start()
     {
         _sr = GetComponent<SpriteRenderer>();
