@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyFollowAI : MonoBehaviour
+public class EnemyFollowAI : BaseEnemy
 {
     [Header("Components")]
 
@@ -27,6 +27,7 @@ public class EnemyFollowAI : MonoBehaviour
     private int direction;
     private float offset;
     private bool isGrounded;
+    private int layerMask;
 
 
     private void Start()
@@ -39,12 +40,16 @@ public class EnemyFollowAI : MonoBehaviour
         direction = 1;
         offset = 0.2f;
         rb = GetComponent<Rigidbody2D>();
+        layerMask = ~(1 << 12);
+        
+
     }
     private void Update()
     {
         if(CanSeePlayer())
         {
             isFollowing = true;
+            Debug.Log("Can see player");
         }
         else
         {
@@ -85,7 +90,7 @@ public class EnemyFollowAI : MonoBehaviour
     public bool CanSeePlayer()
     {
         Vector2 endPos = eyes.position + Vector3.right * rayLength * direction;
-        RaycastHit2D hit = Physics2D.Linecast(eyes.position, endPos);
+        RaycastHit2D hit = Physics2D.Linecast(eyes.position, endPos, layerMask);
 
         Debug.DrawLine(eyes.position, endPos, Color.red);
 
@@ -102,7 +107,7 @@ public class EnemyFollowAI : MonoBehaviour
     public void LookBack()
     {
         Vector2 endPos = lookBackEyes.position + Vector3.left * lookbackRayLength * direction;
-        RaycastHit2D lookBack = Physics2D.Linecast(lookBackEyes.position, endPos);
+        RaycastHit2D lookBack = Physics2D.Linecast(lookBackEyes.position, endPos, layerMask);
 
         Debug.DrawLine(lookBackEyes.position, endPos, Color.blue);
 
@@ -191,5 +196,10 @@ public class EnemyFollowAI : MonoBehaviour
         direction = dir;
         transform.localScale = new Vector2(dir, 1);
     }
-    
+
+    public override void Die()
+    {
+        base.Die();
+        // unique death animation
+    }
 }
