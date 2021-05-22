@@ -27,20 +27,6 @@ public class PlayerHealth : MonoBehaviour
         _healthUI.SetText(_healthCount.ToString());
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.CompareTag("EnemyBullet") || collision.gameObject.CompareTag("Enemy"))
-        {
-            _sr.material = _flashMat;
-
-            _healthCount--;
-
-            if(_healthCount > 0)
-            {
-                Invoke("ResetMaterial", 0.1f);
-            }
-        }
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Explosion"))
@@ -48,6 +34,18 @@ public class PlayerHealth : MonoBehaviour
             _sr.material = _flashMat;
 
             _healthCount -= 2;
+
+            if (_healthCount > 0)
+            {
+                Invoke("ResetMaterial", 0.1f);
+            }
+        }
+
+        if (collision.gameObject.CompareTag("EnemyBullet") || collision.gameObject.CompareTag("Enemy"))
+        {
+            _sr.material = _flashMat;
+
+            _healthCount--;
 
             if (_healthCount > 0)
             {

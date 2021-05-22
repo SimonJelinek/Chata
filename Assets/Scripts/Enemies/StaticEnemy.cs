@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StaticEnemy : MonoBehaviour
+public class StaticEnemy : BaseEnemy
 {
     public GameObject staticEnemyBullet;
     public int numberOfBullets;
@@ -77,5 +77,12 @@ public class StaticEnemy : MonoBehaviour
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, attackRange);
+    }
+
+    public override void Die()
+    {
+        base.Die();
+
+        // unique death animation
     }
 }
