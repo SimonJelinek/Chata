@@ -323,7 +323,7 @@ MonoBehaviour:
   target: {fileID: 1637878724}
   offset: {x: 0, y: 0.75, z: 0}
   lookAheadAmount: {x: 3.2, y: 0, z: 0}
-  speed: 8
+  speed: 5.45
 --- !u!114 &86310648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1401,6 +1401,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7209969462208179712, guid: 6a009d0453b7c844e9c8a4603970fb45, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209969462208179712, guid: 6a009d0453b7c844e9c8a4603970fb45, type: 3}
       propertyPath: m_TagString
       value: Lava
       objectReference: {fileID: 0}
@@ -1409,8 +1413,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7209969462303271639, guid: 6a009d0453b7c844e9c8a4603970fb45, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209969462303271639, guid: 6a009d0453b7c844e9c8a4603970fb45, type: 3}
       propertyPath: m_TagString
       value: Lava
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209969462427905729, guid: 6a009d0453b7c844e9c8a4603970fb45, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7209969462427905729, guid: 6a009d0453b7c844e9c8a4603970fb45, type: 3}
       propertyPath: m_TagString
@@ -1425,8 +1437,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7209969462818689147, guid: 6a009d0453b7c844e9c8a4603970fb45, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209969462818689147, guid: 6a009d0453b7c844e9c8a4603970fb45, type: 3}
       propertyPath: m_TagString
       value: Lava
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209969462990173840, guid: 6a009d0453b7c844e9c8a4603970fb45, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7209969462990173840, guid: 6a009d0453b7c844e9c8a4603970fb45, type: 3}
       propertyPath: m_TagString
@@ -1439,6 +1459,10 @@ PrefabInstance:
     - target: {fileID: 7209969463006289220, guid: 6a009d0453b7c844e9c8a4603970fb45, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209969463006289225, guid: 6a009d0453b7c844e9c8a4603970fb45, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7209969463006289225, guid: 6a009d0453b7c844e9c8a4603970fb45, type: 3}
       propertyPath: m_TagString

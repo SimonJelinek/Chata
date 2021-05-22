@@ -2045,28 +2045,56 @@ PrefabInstance:
       value: MapHolder-Fixed
       objectReference: {fileID: 0}
     - target: {fileID: 8827178299484213682, guid: b8136232d8ab70b418fb212be2e4d6ad, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8827178299484213682, guid: b8136232d8ab70b418fb212be2e4d6ad, type: 3}
       propertyPath: m_TagString
       value: Lava
+      objectReference: {fileID: 0}
+    - target: {fileID: 8827178300512248023, guid: b8136232d8ab70b418fb212be2e4d6ad, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8827178300512248023, guid: b8136232d8ab70b418fb212be2e4d6ad, type: 3}
       propertyPath: m_TagString
       value: Lava
       objectReference: {fileID: 0}
     - target: {fileID: 8827178300581452638, guid: b8136232d8ab70b418fb212be2e4d6ad, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8827178300581452638, guid: b8136232d8ab70b418fb212be2e4d6ad, type: 3}
       propertyPath: m_TagString
       value: Lava
+      objectReference: {fileID: 0}
+    - target: {fileID: 8827178300785134857, guid: b8136232d8ab70b418fb212be2e4d6ad, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8827178300785134857, guid: b8136232d8ab70b418fb212be2e4d6ad, type: 3}
       propertyPath: m_TagString
       value: Lava
       objectReference: {fileID: 0}
     - target: {fileID: 8827178300869917312, guid: b8136232d8ab70b418fb212be2e4d6ad, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8827178300869917312, guid: b8136232d8ab70b418fb212be2e4d6ad, type: 3}
       propertyPath: m_TagString
       value: Lava
       objectReference: {fileID: 0}
     - target: {fileID: 8827178300956089456, guid: b8136232d8ab70b418fb212be2e4d6ad, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8827178300956089456, guid: b8136232d8ab70b418fb212be2e4d6ad, type: 3}
       propertyPath: m_TagString
       value: Lava
+      objectReference: {fileID: 0}
+    - target: {fileID: 8827178300994996611, guid: b8136232d8ab70b418fb212be2e4d6ad, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8827178300994996611, guid: b8136232d8ab70b418fb212be2e4d6ad, type: 3}
       propertyPath: m_TagString
