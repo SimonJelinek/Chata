@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 702349367}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: LavaCastPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1154904532}
   - component: {fileID: 1154904533}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7478705846780594448}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: CastPoint
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -155,9 +155,9 @@ GameObject:
   - component: {fileID: 7478705847392635110}
   - component: {fileID: 7478705847392635105}
   - component: {fileID: 7478705847392635109}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: MovingEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -310,7 +310,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7478705847657399811}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BackCastPoint
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
