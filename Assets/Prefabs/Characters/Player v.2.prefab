@@ -195,6 +195,7 @@ MonoBehaviour:
   _firePoint: {fileID: 1264971187736768901}
   _bulletPrefab: {fileID: 1612612987678581310, guid: 71664bb68e464764596d79624160a6d7, type: 3}
   _ammunitionDisplay: {fileID: 0}
+  _reloadingText: {fileID: 0}
   _allBullets: 30
   _magazineSize: 30
   _bulletsLeft: 30
@@ -318,6 +319,7 @@ MonoBehaviour:
   _firePoint: {fileID: 1264971188109591038}
   _bulletPrefab: {fileID: 1612612987678581310, guid: 71664bb68e464764596d79624160a6d7, type: 3}
   _ammunitionDisplay: {fileID: 0}
+  _reloadingText: {fileID: 0}
   _allBullets: 15
   _magazineSize: 15
   _bulletsLeft: 15
@@ -661,6 +663,7 @@ MonoBehaviour:
   _firePoint: {fileID: 1264971187870102273}
   _bulletPrefab: {fileID: 1612612987678581310, guid: 71664bb68e464764596d79624160a6d7, type: 3}
   _ammunitionDisplay: {fileID: 0}
+  _reloadingText: {fileID: 0}
   _allBullets: 25
   _magazineSize: 25
   _bulletsLeft: 25

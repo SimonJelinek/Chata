@@ -14,15 +14,18 @@ public class IdleBehavior : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+
         if (_timer <= 0)
         {
-            if (_rand == 0)
+            if(_rand == 0)
             {
                 animator.SetTrigger("Spawning");
+                _timer = 3;
             }
             else
             {
                 animator.SetTrigger("Slam");
+                _timer = 3;
             }
 
         }
