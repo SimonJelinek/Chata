@@ -3827,7 +3827,7 @@ PrefabInstance:
       objectReference: {fileID: 356119603}
     - target: {fileID: 8580676108058108731, guid: d8ca4597049d3e143b24d128f3b27e13, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HidePauseScreen
+      value: GoBack
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8ca4597049d3e143b24d128f3b27e13, type: 3}
