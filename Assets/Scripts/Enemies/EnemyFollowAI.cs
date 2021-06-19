@@ -197,9 +197,4 @@ public class EnemyFollowAI : BaseEnemy
         transform.localScale = new Vector2(dir, 1);
     }
 
-    public override void Die()
-    {
-        base.Die();
-        // unique death animation
-    }
 }

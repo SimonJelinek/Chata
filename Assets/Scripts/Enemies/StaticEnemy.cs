@@ -79,10 +79,4 @@ public class StaticEnemy : BaseEnemy
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 
-    public override void Die()
-    {
-        base.Die();
-
-        // unique death animation
-    }
 }
