@@ -15,7 +15,7 @@ public class CrosshairBehavior : MonoBehaviour
         Cursor.visible = false;
     }
 
-    void FixedUpdate()
+    void LateUpdate()
     {
         mousePos = camera.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
         crosshair.transform.position = mousePos;
