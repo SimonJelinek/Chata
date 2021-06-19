@@ -29,4 +29,10 @@ public class InGameScreen_NEW : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene("MenuScene");
     }
+
+    public void RestartLevel(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+        Time.timeScale = 1;
+    }
 }
