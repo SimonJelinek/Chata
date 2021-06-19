@@ -14,13 +14,6 @@ public class CameraFollow : MonoBehaviour
     private Vector3 mousePos;
 
 
-    void Start()
-    {
-        offset.y = 0.75f;
-        lookAheadAmount.x = 3.2f;
-        //speed = 1.6f;
-    }
-
     private void Update()
     {   
         mousePos = GetComponent<Camera>().ScreenToWorldPoint(Input.mousePosition);
