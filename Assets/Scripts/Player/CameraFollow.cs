@@ -18,15 +18,17 @@ public class CameraFollow : MonoBehaviour
     {   
         mousePos = GetComponent<Camera>().ScreenToWorldPoint(Input.mousePosition);
 
-        if(mousePos.x > target.position.x)
+        if (target != null)
         {
-            direction = 1;
-        }
-        if(mousePos.x < target.position.x)
-        {
-            direction = -1;
-        }
-        
+            if (mousePos.x > target.position.x)
+            {
+                direction = 1;
+            }
+            if (mousePos.x < target.position.x)
+            {
+                direction = -1;
+            }
+        }        
     }
 
     void FixedUpdate()

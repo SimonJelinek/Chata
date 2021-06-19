@@ -14,6 +14,7 @@ public class InGameScreen_NEW : MonoBehaviour
         Time.timeScale = 0;
         crosshair.SetActive(false);
         Cursor.visible = true;
+        gameObject.SetActive(false);
     }
 
     public void GoBack()
@@ -22,11 +23,18 @@ public class InGameScreen_NEW : MonoBehaviour
         Time.timeScale = 1;
         crosshair.SetActive(true);
         Cursor.visible = false;
+        gameObject.SetActive(true);
     }
 
     public void GoToMenu()
     {
         Time.timeScale = 1;
         SceneManager.LoadScene("MenuScene");
+    }
+
+    public void RestartLevel(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+        Time.timeScale = 1;
     }
 }

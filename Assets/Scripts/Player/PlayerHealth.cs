@@ -19,6 +19,10 @@ public class PlayerHealth : MonoBehaviour
     private Rigidbody2D _rb;
     private int direction;
 
+    public GameObject gameOverScreen;
+    public GameObject ingameScreen;
+    public GameObject crossHair;
+
     void Awake()
     {
         App.playerHealth = this;
@@ -106,6 +110,7 @@ public class PlayerHealth : MonoBehaviour
     void LavaTrigger()
     {
         _healthCount -= 2;
+        GameOverCheck();
         gameObject.SetActive(false);
         transform.position = App.checkpoints.checkPoint;
         gameObject.SetActive(true);
@@ -115,5 +120,18 @@ public class PlayerHealth : MonoBehaviour
     {
         _rb.AddForce(new Vector2(knockbackPowerX * 50 * direction, 0) /* ForceMode2D.Impulse --> ked tam je tak ten knockbackPowerX sa akokeby capne na knockbackPowerY */);
         _rb.AddForce(new Vector2(0, knockbackPowerY), ForceMode2D.Impulse);
+    }
+
+    void GameOverCheck()
+    {
+        if (_healthCount <= 0)
+        {
+            gameOverScreen.SetActive(true);
+            ingameScreen.SetActive(false);
+            crossHair.SetActive(false);
+            Destroy(gameObject);
+            Cursor.visible = true;
+            Time.timeScale = 0;
+        }
     }
 }
