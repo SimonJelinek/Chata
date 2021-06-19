@@ -12,6 +12,7 @@ TagManager:
   - Ground
   - Lava
   - Checkpoint
+  - Confiner
   layers:
   - Default
   - TransparentFX
