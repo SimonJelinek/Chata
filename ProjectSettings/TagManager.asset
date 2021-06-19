@@ -50,11 +50,14 @@ TagManager:
   - name: Background
     uniqueID: 2510893063
     locked: 0
-  - name: Default
-    uniqueID: 0
+  - name: Lava
+    uniqueID: 429368623
     locked: 0
   - name: Ground
     uniqueID: 492151249
+    locked: 0
+  - name: ForeGround
+    uniqueID: 2558769919
     locked: 0
   - name: Enemy
     uniqueID: 2790724305
@@ -64,4 +67,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1166845887
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
