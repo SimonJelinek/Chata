@@ -1,0 +1,352 @@
+fileFormatVersion: 2
+guid: dc19908fec764c449a5529515e846bcf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2841452505123374061
+    second: chodza bez ruk_0
+  - first:
+      213: 8243057759650162432
+    second: chodza bez ruk_1
+  - first:
+      213: -5470171174482648057
+    second: chodza bez ruk_2
+  - first:
+      213: 8745335480268637112
+    second: chodza bez ruk_3
+  - first:
+      213: -4988672974306715280
+    second: chodza bez ruk_4
+  - first:
+      213: -7417306500585601636
+    second: chodza bez ruk_5
+  - first:
+      213: 2475222165039901631
+    second: chodza bez ruk_6
+  - first:
+      213: -1488623067347237996
+    second: chodza bez ruk_7
+  - first:
+      213: -415273293093834979
+    second: chodza bez ruk_8
+  - first:
+      213: 7344010862194732675
+    second: chodza bez ruk_9
+  - first:
+      213: 5589568175847575994
+    second: chodza bez ruk_10
+  - first:
+      213: -8609418362361716708
+    second: chodza bez ruk_11
+  - first:
+      213: 3384470486517526181
+    second: chodza bez ruk_12
+  - first:
+      213: 657600945623609086
+    second: chodza bez ruk_13
+  - first:
+      213: 4409731458564068130
+    second: chodza bez ruk_14
+  - first:
+      213: -3671874060782053689
+    second: chodza bez ruk_15
+  - first:
+      213: 9190854178143903273
+    second: chodza bez ruk_16
+  - first:
+      213: -8283248605301464833
+    second: chodza bez ruk_17
+  - first:
+      213: -4054843368825907115
+    second: chodza bez ruk_18
+  - first:
+      213: 1134174482809271162
+    second: chodza bez ruk_19
+  - first:
+      213: 8557644805088886572
+    second: chodza bez ruk_20
+  - first:
+      213: 2561387440003331111
+    second: chodza bez ruk_21
+  - first:
+      213: -845193076538909289
+    second: chodza bez ruk_22
+  - first:
+      213: 3916630207559995989
+    second: chodza bez ruk_23
+  - first:
+      213: -4052316418874492754
+    second: chodza bez ruk_24
+  - first:
+      213: 4450046117683060249
+    second: chodza bez ruk_25
+  - first:
+      213: 7406760103812105967
+    second: chodza bez ruk_26
+  - first:
+      213: 1658662161104714423
+    second: chodza bez ruk_27
+  - first:
+      213: 3515007836915155223
+    second: chodza bez ruk_28
+  - first:
+      213: 8475680922461445732
+    second: chodza bez ruk_29
+  - first:
+      213: -2246528301036753088
+    second: chodza bez ruk_30
+  - first:
+      213: -7584741516576591719
+    second: chodza bez ruk_31
+  - first:
+      213: -6199840279849340819
+    second: chodza bez ruk_32
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: chodza bez ruk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 91
+        width: 645
+        height: 1369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31c3af150022198d0800000000000000
+      internalID: -2841452505123374061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chodza bez ruk_1
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 83
+        width: 573
+        height: 1355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 007a9fadb59356270800000000000000
+      internalID: 8243057759650162432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chodza bez ruk_2
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 62
+        width: 563
+        height: 1406
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 704616c8c4c0614b0800000000000000
+      internalID: -5470171174482648057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chodza bez ruk_3
+      rect:
+        serializedVersion: 2
+        x: 1925
+        y: 77
+        width: 578
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b34807d84cad5970800000000000000
+      internalID: 8745335480268637112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chodza bez ruk_4
+      rect:
+        serializedVersion: 2
+        x: 2660
+        y: 84
+        width: 567
+        height: 1391
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0795bd96c5ca4cab0800000000000000
+      internalID: -4988672974306715280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chodza bez ruk_5
+      rect:
+        serializedVersion: 2
+        x: 3278
+        y: 88
+        width: 534
+        height: 1380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c95466a490f601990800000000000000
+      internalID: -7417306500585601636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chodza bez ruk_6
+      rect:
+        serializedVersion: 2
+        x: 3972
+        y: 122
+        width: 550
+        height: 1346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb606fd171c95220800000000000000
+      internalID: 2475222165039901631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
