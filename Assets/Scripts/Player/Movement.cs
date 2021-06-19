@@ -16,6 +16,7 @@ public class Movement : MonoBehaviour
     public AudioClip _landingSound;
     public AudioClip _footsteps;
     public AudioClip _jumpingSound;
+    private Animator animator;
 
     [Header("Movement Variables")]
 
@@ -50,6 +51,7 @@ public class Movement : MonoBehaviour
     {
         _source = GetComponent<AudioSource>();
         _rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         dustParticlesEmission = dustParticles.emission;
         _source.volume = PlayerPrefs.GetFloat("Volume");
     }
@@ -123,8 +125,8 @@ public class Movement : MonoBehaviour
             {
                 _isJumping = false;
             }
-
         }
+
 
         if (Input.GetKeyUp(KeyCode.Space))
         {
@@ -136,6 +138,8 @@ public class Movement : MonoBehaviour
             App.inGameScreen_NEW.ShowPauseScreen();
         }
 
+        animator.SetFloat("velocityY", _rb.velocity.y);
+        animator.SetBool("isGrounded", _isGrounded);
     }
 
     private void FixedUpdate()
@@ -144,11 +148,11 @@ public class Movement : MonoBehaviour
 
         if (_horizontalDirection > 0)
         {
-            sr.flipX = false;
+            sr.flipX = true;
         }
         else if (_horizontalDirection < 0)
         {
-            sr.flipX = true;
+            sr.flipX = false;
         }
 
         if (_isGrounded)
@@ -176,10 +180,12 @@ public class Movement : MonoBehaviour
         if(GetInput().x != 0 && _isGrounded)
         {
             dustParticlesEmission.rateOverTime = 35f;
+            animator.SetBool("isWalking", true);
         }
         else
         {
             dustParticlesEmission.rateOverTime = 0f;
+            animator.SetBool("isWalking", false);
         }
 
         if (Mathf.Abs(_rb.velocity.x) > _maxMoveSpeed)
