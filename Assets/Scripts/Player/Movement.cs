@@ -51,6 +51,7 @@ public class Movement : MonoBehaviour
         _source = GetComponent<AudioSource>();
         _rb = GetComponent<Rigidbody2D>();
         dustParticlesEmission = dustParticles.emission;
+        _source.volume = PlayerPrefs.GetFloat("Volume");
     }
 
     private void Update()
@@ -58,7 +59,7 @@ public class Movement : MonoBehaviour
         if(_horizontalDirection != 0 && _isGrounded && _source.isPlaying == false)
         {
             _source.clip = _footsteps;
-            _source.volume = Random.Range(0.8f, 0.3f);
+            //_source.volume = Random.Range(0.8f, 0.3f);
             _source.pitch = Random.Range(1f, 0.9f);
             _source.Play();
         }
@@ -73,7 +74,7 @@ public class Movement : MonoBehaviour
             if(_spawnDustOnLand == true)
             {
                 _source.clip = _landingSound;
-                _source.volume = Random.Range(1, 0.6f);
+                //_source.volume = Random.Range(1, 0.6f);
                 _source.Play();
                 Instantiate(_onDropDustEffect, _feetPos.position, Quaternion.identity);
                 _spawnDustOnLand = false;
@@ -218,7 +219,7 @@ public class Movement : MonoBehaviour
     {
         _source.clip = _jumpingSound;
         _source.pitch = Random.Range(1f, 0.9f);
-        _source.volume = Random.Range(1, 0.6f);
+        //_source.volume = Random.Range(1, 0.6f);
         _source.Play();
         Instantiate(_onDropDustEffect, _feetPos.position, Quaternion.identity);
     }
