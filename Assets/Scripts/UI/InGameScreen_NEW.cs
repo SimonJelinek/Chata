@@ -8,13 +8,29 @@ public class InGameScreen_NEW : MonoBehaviour
     public GameObject pauseScreen;
     public GameObject crosshair;
 
+    bool pause = false;
+
+    void Awake()
+    {
+        App.inGameScreen_NEW = this;
+    }
+
     public void ShowPauseScreen()
     {
-        pauseScreen.SetActive(true);
-        Time.timeScale = 0;
-        crosshair.SetActive(false);
-        Cursor.visible = true;
-        gameObject.SetActive(false);
+        pause = !pause;
+
+        if (pause)
+        {
+            pauseScreen.SetActive(true);
+            Time.timeScale = 0;
+            crosshair.SetActive(false);
+            Cursor.visible = true;
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            GoBack();
+        }
     }
 
     public void GoBack()

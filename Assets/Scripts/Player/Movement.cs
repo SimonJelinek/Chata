@@ -130,6 +130,12 @@ public class Movement : MonoBehaviour
         {
             _isJumping = false;
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            App.inGameScreen_NEW.ShowPauseScreen();
+        }
+
     }
 
     private void FixedUpdate()
