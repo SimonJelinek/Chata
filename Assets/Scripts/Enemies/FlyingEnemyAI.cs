@@ -158,11 +158,4 @@ public class FlyingEnemyAI : BaseEnemy
     }
     - v BaseEnemy
      */
-
-    public override void Die()
-    {
-        base.Die();
-        // unique death animation
-    }
-
 }
