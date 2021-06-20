@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Checkpoints : MonoBehaviour
 {
@@ -18,5 +19,21 @@ public class Checkpoints : MonoBehaviour
         {
             checkPoint = transform.position;
         }
+        if (collision.gameObject.tag == "LevelPass")
+        {
+            if (SceneManager.GetActiveScene()==SceneManager.GetSceneByName("Level1"))
+            {
+                PassLevel("Level2");
+            }
+            else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level2"))
+            {
+                Debug.Log("LoadLevel3");
+            }
+        }
+    }
+
+    void PassLevel(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }
