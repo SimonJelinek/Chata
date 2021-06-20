@@ -23,17 +23,12 @@ public class Checkpoints : MonoBehaviour
         {
             if (SceneManager.GetActiveScene()==SceneManager.GetSceneByName("Level1"))
             {
-                PassLevel("Level2");
+                App.levelLoader.Load("Level2");
             }
             else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level2"))
             {
-                Debug.Log("LoadLevel3");
+                //App.levelLoader.Load("Level3");
             }
         }
-    }
-
-    void PassLevel(string sceneName)
-    {
-        SceneManager.LoadScene(sceneName);
     }
 }
