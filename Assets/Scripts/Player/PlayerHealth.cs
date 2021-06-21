@@ -10,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     public Material _flashMat;
     public float knockbackPowerX;
     public float knockbackPowerY;
+    public float knockbackFreezeTime;
 
     [Header("Health Variables")]
     [SerializeField] private float _maxHealth;
@@ -23,6 +24,8 @@ public class PlayerHealth : MonoBehaviour
     public GameObject ingameScreen;
     public GameObject crossHair;
 
+    public Movement playerMovementScript;
+
     void Awake()
     {
         App.playerHealth = this;
@@ -34,11 +37,7 @@ public class PlayerHealth : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         _defMat = _sr.material;
         _healthCount = _maxHealth;
-    }
-
-    void Update()
-    {
-        _healthUI.SetText(_healthCount.ToString());
+        UpdateUI();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -48,11 +47,9 @@ public class PlayerHealth : MonoBehaviour
             _sr.material = _flashMat;
 
             _healthCount -= 2;
+            UpdateUI();
 
-            if (_healthCount > 0)
-            {
-                Invoke("ResetMaterial", 0.1f);
-            }
+            HealthCheck();
         }
 
         if (collision.gameObject.CompareTag("EnemyBullet"))
@@ -60,11 +57,9 @@ public class PlayerHealth : MonoBehaviour
             _sr.material = _flashMat;
 
             _healthCount--;
+            UpdateUI();
 
-            if (_healthCount > 0)
-            {
-                Invoke("ResetMaterial", 0.1f);
-            }
+            HealthCheck();
         }
 
         if (collision.gameObject.CompareTag("Lava"))
@@ -80,11 +75,9 @@ public class PlayerHealth : MonoBehaviour
             _sr.material = _flashMat;
 
             _healthCount--;
+            UpdateUI();
 
-            if (_healthCount > 0)
-            {
-                Invoke("ResetMaterial", 0.1f);
-            }
+            HealthCheck();
 
             if (collision.transform.position.x > transform.position.x)
             {
@@ -102,36 +95,58 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    private void ResetMaterial()
-    {
-        _sr.material = _defMat;
-    }
-
     void LavaTrigger()
     {
+        _sr.material = _flashMat;
+
         _healthCount -= 2;
-        GameOverCheck();
+        UpdateUI();
+
+        HealthCheck();
+
         gameObject.SetActive(false);
+
         transform.position = App.checkpoints.checkPoint;
+
         gameObject.SetActive(true);
     }
 
     void Knockback()
     {
-        _rb.AddForce(new Vector2(knockbackPowerX * 50 * direction, 0) /* ForceMode2D.Impulse --> ked tam je tak ten knockbackPowerX sa akokeby capne na knockbackPowerY */);
-        _rb.AddForce(new Vector2(0, knockbackPowerY), ForceMode2D.Impulse);
+        _rb.AddForce(new Vector2(knockbackPowerX * direction, knockbackPowerY), ForceMode2D.Impulse);
+
+        playerMovementScript.knockbackFreezeTimeCounter = knockbackFreezeTime;
     }
 
-    void GameOverCheck()
+    private void ResetMaterial()
     {
-        if (_healthCount <= 0)
+        _sr.material = _defMat;
+    }
+
+    void UpdateUI()
+    {
+        _healthUI.SetText(_healthCount.ToString());
+    }
+
+    void HealthCheck()
+    {
+        if (_healthCount > 0)
         {
-            gameOverScreen.SetActive(true);
-            ingameScreen.SetActive(false);
-            crossHair.SetActive(false);
-            Destroy(gameObject);
-            Cursor.visible = true;
-            Time.timeScale = 0;
+            Invoke("ResetMaterial", 0.1f);
         }
+        else
+        {
+            Invoke("GameOver", 0.75f); // animacia zomretia bude mat 0.75s
+        }
+    }
+
+    void GameOver()
+    { 
+        gameOverScreen.SetActive(true);
+        ingameScreen.SetActive(false);
+        crossHair.SetActive(false);
+        Destroy(gameObject);
+        Cursor.visible = true;
+        Time.timeScale = 0;   
     }
 }

@@ -23,10 +23,12 @@ public class CameraFollow : MonoBehaviour
             if (mousePos.x > target.position.x)
             {
                 direction = 1;
+                target.rotation = Quaternion.Euler(0, 0, 0);
             }
             if (mousePos.x < target.position.x)
             {
                 direction = -1;
+                target.rotation = Quaternion.Euler(0, 180, 0);
             }
         }        
     }

@@ -9,7 +9,6 @@ public class Movement : MonoBehaviour
     public Transform _feetPos;
     public ParticleSystem dustParticles;
     private ParticleSystem.EmissionModule dustParticlesEmission;
-    public SpriteRenderer sr;
     private Rigidbody2D _rb;
     public GameObject _onDropDustEffect;
     private AudioSource _source;
@@ -46,6 +45,7 @@ public class Movement : MonoBehaviour
     private float _hangTimeCounter;
     [SerializeField] private float _bufferTime;
     private float _bufferTimeCounter;
+    public float knockbackFreezeTimeCounter;
 
     private void Start()
     {
@@ -144,15 +144,13 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        MoveCharacter();
-
-        if (_horizontalDirection > 0)
+        if(knockbackFreezeTimeCounter <= 0)
         {
-            sr.flipX = true;
+            MoveCharacter();
         }
-        else if (_horizontalDirection < 0)
+        else
         {
-            sr.flipX = false;
+            knockbackFreezeTimeCounter -= Time.fixedDeltaTime;
         }
 
         if (_isGrounded)
