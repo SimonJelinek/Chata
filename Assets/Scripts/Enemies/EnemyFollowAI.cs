@@ -151,7 +151,7 @@ public class EnemyFollowAI : BaseEnemy
 
     public bool IsNearLava()
     {
-        Vector2 endPos = lavaCheck.position + Vector3.down * 0.4f;
+        Vector2 endPos = lavaCheck.position + Vector3.down * 5f;
         RaycastHit2D hit = Physics2D.Linecast(lavaCheck.position, endPos, LayerMask.GetMask("Lava"));
 
         Debug.DrawLine(lavaCheck.position, endPos, Color.yellow);

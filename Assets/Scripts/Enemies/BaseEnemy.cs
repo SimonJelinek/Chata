@@ -18,8 +18,6 @@ public class BaseEnemy : MonoBehaviour
         {
             health--;
 
-            Debug.Log("hit bullet");
-
             // flash
 
             if(health <= 0)
