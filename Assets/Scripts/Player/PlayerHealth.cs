@@ -66,6 +66,11 @@ public class PlayerHealth : MonoBehaviour
         {
             LavaTrigger();
         }
+
+        if (collision.CompareTag("Offset"))
+        {
+            App.cameraFollow.ChangeCamera(1.6f, 2.15f);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
