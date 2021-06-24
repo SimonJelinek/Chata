@@ -20,12 +20,15 @@ public class StaticEnemy : BaseEnemy
 
     float xPos;
     bool shooting = false;
-    private void Start()
+
+    public override void Start()
     {
+        base.Start();
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
-    void Update()
+    public override void Update()
     {
+        base.Update();
         if (shooting)
         {
             time += Time.deltaTime;

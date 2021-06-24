@@ -31,8 +31,10 @@ public class FlyingEnemyAI : BaseEnemy
     public Material _flashMat;
     private SpriteRenderer _sr;
 
-    void Start()
+    public override void Start()
     {
+        base.Start();
+
         _randomSpot = Random.Range(0, _moveSpots.Length);
         _waitTime = _startWaitTime;
 
@@ -44,9 +46,9 @@ public class FlyingEnemyAI : BaseEnemy
         _player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    void Update()
-    { 
-
+    public override void Update()
+    {
+        base.Update();
         RaycastHit2D hit = Physics2D.Linecast(gameObject.transform.position, _player.transform.position, 1 << LayerMask.NameToLayer("Ground"));
 
         if (following == false)

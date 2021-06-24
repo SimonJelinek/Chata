@@ -7,10 +7,30 @@ public class BaseEnemy : MonoBehaviour
     public int health;
     public GameObject rifleAmmoBox;
     public GameObject shotgunAmmoBox;
-   // public Animation deathAnimation; - miesto animacie bude dissolve shader
 
     private int randomFactor;
     private int randomFactor2;
+    private Material dissolveMat;
+    private SpriteRenderer sr;
+    private float timer;
+    private float deathAnimTime;
+
+    public virtual void Start()
+    {
+        sr = GetComponent<SpriteRenderer>();
+        dissolveMat = sr.material;
+        deathAnimTime = 0.75f;
+    }
+
+    public virtual void Update()
+    {
+        if(timer > 0)
+        {
+            timer -= Time.deltaTime;
+            dissolveMat.SetFloat("Fade", timer / deathAnimTime);
+        }
+
+    }
 
     public virtual void OnTriggerEnter2D(Collider2D collision)
     {
@@ -29,9 +49,9 @@ public class BaseEnemy : MonoBehaviour
 
     public void Die()
     {
-        // Dissolve shader
-        Invoke("DestroyEnemy", 0.75f);
-        
+        dissolveMat.SetFloat("Fade", 1);
+        timer = deathAnimTime;
+        Invoke("DestroyEnemy", deathAnimTime);
     }
 
     public void DestroyEnemy()
@@ -40,7 +60,6 @@ public class BaseEnemy : MonoBehaviour
         if (randomFactor > 30)
         {
             randomFactor2 = Random.Range(0, 2);
-            Debug.Log(randomFactor2.ToString());
             if (randomFactor2 == 0)
             {
                 Instantiate(rifleAmmoBox, this.gameObject.transform.position, Quaternion.identity);

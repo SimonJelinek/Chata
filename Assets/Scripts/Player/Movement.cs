@@ -24,6 +24,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private float _linearDrag;
     private float _horizontalDirection;
     private bool _changingDirections => (_rb.velocity.x > 0f && _horizontalDirection < 0f) || (_rb.velocity.x < 0f && _horizontalDirection > 0f);
+    [HideInInspector] public bool isAlive;
 
     [Header("Jumping Variables")]
 
@@ -54,6 +55,7 @@ public class Movement : MonoBehaviour
         animator = GetComponent<Animator>();
         dustParticlesEmission = dustParticles.emission;
         _source.volume = PlayerPrefs.GetFloat("Volume");
+        isAlive = true;
     }
 
     private void Update()
@@ -102,7 +104,7 @@ public class Movement : MonoBehaviour
         }
 
 
-        if (_hangTimeCounter > 0f && _bufferTimeCounter > 0)
+        if (_hangTimeCounter > 0f && _bufferTimeCounter > 0 && isAlive)
         {
             EffectsOnJump();
 
@@ -146,7 +148,10 @@ public class Movement : MonoBehaviour
     {
         if(knockbackFreezeTimeCounter <= 0)
         {
-            MoveCharacter();
+            if(isAlive)
+            {
+                MoveCharacter();
+            }
         }
         else
         {
