@@ -152,10 +152,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7478705847392635108}
   - component: {fileID: 7478705847392635111}
-  - component: {fileID: 7478705847392635110}
   - component: {fileID: 7478705847392635105}
-  - component: {fileID: 7478705847392635109}
   - component: {fileID: 2068103736}
+  - component: {fileID: 58095939}
   m_Layer: 12
   m_Name: FollowingEnemy
   m_TagString: Enemy
@@ -200,7 +199,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: ecdf3de02138a5b4fa4596b06de3bd15, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -232,32 +231,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &7478705847392635110
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7478705847392635104}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0012525916, y: 0.0008659363}
-  m_SpriteTilingProperty:
-    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
-    newSize: {x: 0.93135476, y: 0.6660796}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 1
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.9032899, y: 0.6394596}
-  m_EdgeRadius: 0
 --- !u!50 &7478705847392635105
 Rigidbody2D:
   serializedVersion: 4
@@ -279,29 +252,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &7478705847392635109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7478705847392635104}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e23d00517e3686049ade4ce5bc998e91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 5
-  rifleAmmoBox: {fileID: 5426684245778898564, guid: be97423f3462d554480d5b40d3cc5ee3, type: 3}
-  shotgunAmmoBox: {fileID: 1206988941485492470, guid: ba23705e32eaa8f4ea5904f80b60bf71, type: 3}
-  player: {fileID: 1264971188315353782, guid: e6dfb27ffb5b4c64d9e7c478eadba4a0, type: 3}
-  eyes: {fileID: 7478705846780594448}
-  lookBackEyes: {fileID: 7478705847657399811}
-  lavaCheck: {fileID: 702349367}
-  rayLength: 5
-  lookbackRayLength: 3
-  speed: 1.75
-  jumpForce: 7.87
 --- !u!114 &2068103736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,9 +270,25 @@ MonoBehaviour:
   player: {fileID: 0}
   eyes: {fileID: 7478705846780594448}
   lavaCheck: {fileID: 702349367}
-  seeDistance: 5
+  seeDistance: 12
   speed: 1.8
   jumpForce: 8
+--- !u!70 &58095939
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7478705847392635104}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.93135476, y: 0.6660796}
+  m_Direction: 1
 --- !u!1 &7478705847657399810
 GameObject:
   m_ObjectHideFlags: 0

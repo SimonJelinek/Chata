@@ -23,8 +23,9 @@ public class EnemyFollowAI_NEW : BaseEnemy
     private bool isFollowing;
     private bool isGrounded;
 
-    void Start()
+    public override void Start()
     {
+        base.Start();
         layerMask = ~(1 << 12);
         rb = GetComponent<Rigidbody2D>();
         offset = 0.2f;
@@ -63,6 +64,7 @@ public class EnemyFollowAI_NEW : BaseEnemy
         dir = (player.position - transform.position);
         dir.Normalize();
         RaycastHit2D hit = Physics2D.Raycast(eyes.position, dir, seeDistance, layerMask);
+        Debug.DrawRay(eyes.position, dir, Color.blue);
 
         if (hit.collider != null && hit.collider.gameObject.CompareTag("Player"))
         {
