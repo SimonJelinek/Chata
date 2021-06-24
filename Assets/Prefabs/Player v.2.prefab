@@ -653,7 +653,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c023d6c276b05324eb93228fa70fcdbc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -704,13 +704,14 @@ MonoBehaviour:
   _footsteps: {fileID: 8300000, guid: b545f578ab82eec4b8c39b77fbbf720b, type: 3}
   _jumpingSound: {fileID: 8300000, guid: b6beae11ee412054cae285e7081f3de2, type: 3}
   _movementAcceleration: 25
-  _maxMoveSpeed: 3
+  _maxMoveSpeed: 3.4
   _linearDrag: 15
+  isAlive: 0
   _whatIsGround:
     serializedVersion: 2
     m_Bits: 256
   _checkRadius: 0.35
-  _jumpForce: 10
+  _jumpForce: 11.5
   _fallMultiplier: 5.3
   _lowJumpFallMultiplier: 7
   _airLinearDrag: 3
@@ -849,14 +850,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _healthUI: {fileID: 0}
   _flashMat: {fileID: 2100000, guid: d6d03618cbbdd0e47bf6e5134e19b6a1, type: 2}
+  playerMovementScript: {fileID: 2430393987689764917}
   knockbackPowerX: 10
   knockbackPowerY: 18
   knockbackFreezeTime: 0.5
-  _maxHealth: 10
+  _maxHealth: 1
+  deathAnimTime: 1
   gameOverScreen: {fileID: 0}
   ingameScreen: {fileID: 0}
   crossHair: {fileID: 0}
-  playerMovementScript: {fileID: 2430393987689764917}
 --- !u!114 &2430393987689764939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -954,7 +956,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1.15
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 00000000d1a1551dd11257a673863a37bfa78c45
+  m_ApplyToSortingLayers: 00000000d1a1551dd11257a673863a37bfa78c45ffba83980730a995
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0

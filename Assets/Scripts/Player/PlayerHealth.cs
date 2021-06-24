@@ -8,23 +8,24 @@ public class PlayerHealth : MonoBehaviour
     [Header("Components")]
     public TextMeshProUGUI _healthUI;
     public Material _flashMat;
+    public Movement playerMovementScript;
     public float knockbackPowerX;
     public float knockbackPowerY;
     public float knockbackFreezeTime;
 
     [Header("Health Variables")]
     [SerializeField] private float _maxHealth;
+    public float deathAnimTime;
     private float _healthCount;
-    private Material _defMat;
+    private Material dissolveMat;
     private SpriteRenderer _sr;
     private Rigidbody2D _rb;
     private int direction;
+    private float timer;
 
     public GameObject gameOverScreen;
     public GameObject ingameScreen;
     public GameObject crossHair;
-
-    public Movement playerMovementScript;
 
     void Awake()
     {
@@ -35,17 +36,24 @@ public class PlayerHealth : MonoBehaviour
     {
         _sr = GetComponent<SpriteRenderer>();
         _rb = GetComponent<Rigidbody2D>();
-        _defMat = _sr.material;
+        dissolveMat = _sr.material;
         _healthCount = _maxHealth;
         UpdateUI();
+        deathAnimTime = 1;
     }
 
+    private void Update()
+    {
+        if(timer > 0)
+        {
+            timer -= Time.deltaTime;
+            dissolveMat.SetFloat("Fade", timer / deathAnimTime);
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Explosion"))
         {
-            _sr.material = _flashMat;
-
             _healthCount -= 2;
             UpdateUI();
 
@@ -54,8 +62,6 @@ public class PlayerHealth : MonoBehaviour
 
         if (collision.gameObject.CompareTag("EnemyBullet"))
         {
-            _sr.material = _flashMat;
-
             _healthCount--;
             UpdateUI();
 
@@ -77,8 +83,6 @@ public class PlayerHealth : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            _sr.material = _flashMat;
-
             _healthCount--;
             UpdateUI();
 
@@ -102,18 +106,20 @@ public class PlayerHealth : MonoBehaviour
 
     void LavaTrigger()
     {
-        _sr.material = _flashMat;
-
         _healthCount -= 2;
         UpdateUI();
 
         HealthCheck();
 
-        gameObject.SetActive(false);
+        if(_healthCount > 0)
+        {
+            gameObject.SetActive(false);
 
-        transform.position = App.checkpoints.checkPoint;
+            transform.position = App.checkpoints.checkPoint;
 
-        gameObject.SetActive(true);
+            gameObject.SetActive(true);
+        }
+        
     }
 
     void Knockback()
@@ -125,7 +131,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void ResetMaterial()
     {
-        _sr.material = _defMat;
+        _sr.material = dissolveMat;
     }
 
     void UpdateUI()
@@ -137,11 +143,18 @@ public class PlayerHealth : MonoBehaviour
     {
         if (_healthCount > 0)
         {
+            _sr.material = _flashMat;
             Invoke("ResetMaterial", 0.1f);
         }
         else
         {
-            Invoke("GameOver", 0.75f); // animacia zomretia bude mat 0.75s
+            Invoke("ResetMaterial", 0.1f);
+            playerMovementScript.isAlive = false;
+            _rb.velocity = new Vector2(0, 0);
+            dissolveMat.SetFloat("Fade", 0);
+            timer = deathAnimTime;
+            Invoke("GameOver", deathAnimTime + 0.2f);
+            Invoke("DestroyHand", deathAnimTime / 3);
         }
     }
 
@@ -153,5 +166,11 @@ public class PlayerHealth : MonoBehaviour
         Destroy(gameObject);
         Cursor.visible = true;
         Time.timeScale = 0;   
+    }
+
+    void DestroyHand()
+    {
+        var childObj = transform.Find("WeaponHolder");
+        childObj.gameObject.SetActive(false);
     }
 }
