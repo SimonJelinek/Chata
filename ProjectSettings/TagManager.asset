@@ -15,6 +15,7 @@ TagManager:
   - Confiner
   - LevelPass
   - Offset
+  - Doska
   layers:
   - Default
   - TransparentFX
