@@ -20,6 +20,7 @@ public class BaseEnemy : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         dissolveMat = sr.material;
         deathAnimTime = 0.75f;
+        timer = 0;
     }
 
     public virtual void Update()
@@ -42,7 +43,11 @@ public class BaseEnemy : MonoBehaviour
 
             if(health <= 0)
             {
-                Die();
+                if (timer <= 0)
+                {
+                    Die();
+                }
+                
             }
         }
     }
