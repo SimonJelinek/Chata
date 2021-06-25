@@ -267,7 +267,7 @@ MonoBehaviour:
   health: 5
   rifleAmmoBox: {fileID: 5426684245778898564, guid: be97423f3462d554480d5b40d3cc5ee3, type: 3}
   shotgunAmmoBox: {fileID: 1206988941485492470, guid: ba23705e32eaa8f4ea5904f80b60bf71, type: 3}
-  player: {fileID: 0}
+  player: {fileID: 1264971188315353782, guid: e6dfb27ffb5b4c64d9e7c478eadba4a0, type: 3}
   eyes: {fileID: 7478705846780594448}
   lavaCheck: {fileID: 702349367}
   seeDistance: 12
