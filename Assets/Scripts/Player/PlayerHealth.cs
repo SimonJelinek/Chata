@@ -86,8 +86,6 @@ public class PlayerHealth : MonoBehaviour
             _healthCount--;
             UpdateUI();
 
-            HealthCheck();
-
             if (collision.transform.position.x > transform.position.x)
             {
                 // player je nalavo od enemaka
@@ -99,8 +97,12 @@ public class PlayerHealth : MonoBehaviour
                 direction = 1;
             }
 
-            Knockback();
+            HealthCheck();
 
+            if(_healthCount > 0)
+            {
+                Knockback();
+            }
         }
     }
 
@@ -136,7 +138,15 @@ public class PlayerHealth : MonoBehaviour
 
     void UpdateUI()
     {
-        _healthUI.SetText(_healthCount.ToString());
+        if (_healthCount > 0)
+        {
+            _healthUI.SetText(_healthCount.ToString());
+        }
+        else
+        {
+            _healthUI.SetText("0");
+        }
+
     }
 
     void HealthCheck()
@@ -148,6 +158,7 @@ public class PlayerHealth : MonoBehaviour
         }
         else
         {
+            _sr.material = _flashMat;
             Invoke("ResetMaterial", 0.1f);
             playerMovementScript.isAlive = false;
             _rb.velocity = new Vector2(0, 0);
