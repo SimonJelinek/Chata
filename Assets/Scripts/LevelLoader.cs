@@ -17,7 +17,10 @@ public class LevelLoader : MonoBehaviour
 
     public void Load(string sceneName)
     {
-        levelsScreen.SetActive(false);
+        if (levelsScreen != null) 
+        {
+            levelsScreen.SetActive(false);
+        }
         StartCoroutine(LoadScene(sceneName));
     }
 
