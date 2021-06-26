@@ -6,9 +6,19 @@ using UnityEngine.UI;
 public class LevelSelection : MonoBehaviour
 {
     public Button[] lvlButtons;
-    
+
+    void Awake() 
+    {
+        App.levelSelection = this;
+    }
+
     // Start is called before the first frame update
     void Start()
+    {
+        ReloadButtons(); 
+    }
+
+    public void ReloadButtons() 
     {
         int levelAt = PlayerPrefs.GetInt("levelAt", 1);
 

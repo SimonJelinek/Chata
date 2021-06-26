@@ -19,6 +19,11 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadScene(sceneName));
     }
 
+    public void Reset() 
+    {
+        PlayerPrefs.DeleteAll();
+    }
+
     IEnumerator LoadScene(string sceneName)
     {
         transition.SetTrigger("Start");
