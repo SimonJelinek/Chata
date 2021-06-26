@@ -9,10 +9,21 @@ public class MainMenuScreen : MonoBehaviour
     public Slider volumeSlider;
 
     public GameObject settingsScreen;
+    public GameObject levelsScreen;
 
     public void StartLevel()
     {
        SceneManager.LoadScene("Level1");
+    }
+
+    public void ShowLevels() 
+    {
+        levelsScreen.SetActive(true);
+    }
+
+    public void HideLevels() 
+    {
+        levelsScreen.SetActive(false);
     }
 
     public void ShowSettings()
