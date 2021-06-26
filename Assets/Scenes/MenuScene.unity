@@ -2030,6 +2030,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5191049451107038145, guid: 635a2431638add04fa7133bd010ef054, type: 3}
+      propertyPath: levelsScreen
+      value: 
+      objectReference: {fileID: 301280346}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 635a2431638add04fa7133bd010ef054, type: 3}
 --- !u!1 &1021544530950413332 stripped

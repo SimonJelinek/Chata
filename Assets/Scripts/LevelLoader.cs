@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
+    public GameObject levelsScreen;
     public Animator transition;
     public float transitionTime;
 
@@ -16,6 +17,7 @@ public class LevelLoader : MonoBehaviour
 
     public void Load(string sceneName)
     {
+        levelsScreen.SetActive(false);
         StartCoroutine(LoadScene(sceneName));
     }
 
