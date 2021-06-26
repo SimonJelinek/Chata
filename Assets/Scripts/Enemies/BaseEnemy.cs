@@ -67,13 +67,15 @@ public class BaseEnemy : MonoBehaviour
             randomFactor2 = Random.Range(0, 2);
             if (randomFactor2 == 0)
             {
-                Instantiate(rifleAmmoBox, this.gameObject.transform.position, Quaternion.identity);
+                rifleAmmoBox.transform.parent = null;
+                rifleAmmoBox.SetActive(true);
             }
             if (randomFactor2 == 1)
             {
-                Instantiate(shotgunAmmoBox, this.gameObject.transform.position, Quaternion.identity);
+                shotgunAmmoBox.transform.parent = null;
+                shotgunAmmoBox.SetActive(true);
             }
         }
-        Destroy(this.gameObject);
+        this.gameObject.SetActive(false);
     }
 }
