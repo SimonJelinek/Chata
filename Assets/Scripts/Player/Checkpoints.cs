@@ -28,6 +28,11 @@ public class Checkpoints : MonoBehaviour
         }
         if (collision.gameObject.tag == "LevelPass")
         {
+            if (SceneManager.GetActiveScene()==SceneManager.GetSceneByName("Tutorial"))
+            {
+                App.levelLoader.Load("Level1");
+            }
+
             if (SceneManager.GetActiveScene()==SceneManager.GetSceneByName("Level1"))
             {
                 App.levelLoader.Load("Level2");

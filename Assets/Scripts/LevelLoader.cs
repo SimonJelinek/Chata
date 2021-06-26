@@ -11,6 +11,7 @@ public class LevelLoader : MonoBehaviour
     void Awake()
     {
         App.levelLoader = this;
+        //PlayerPrefs.DeleteAll();
     }
 
     public void Load(string sceneName)
