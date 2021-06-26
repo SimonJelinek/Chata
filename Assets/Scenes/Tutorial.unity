@@ -1503,6 +1503,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShotgunAmmoBox
       objectReference: {fileID: 0}
+    - target: {fileID: 1206988941485492473, guid: ba23705e32eaa8f4ea5904f80b60bf71, type: 3}
+      propertyPath: ammo
+      value: 
+      objectReference: {fileID: 1213488346}
     - target: {fileID: 1206988941485492474, guid: ba23705e32eaa8f4ea5904f80b60bf71, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2268,6 +2272,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1213488346 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2430393986631218324, guid: 51305195bfc194547ad22b7f13f7c35c, type: 3}
+  m_PrefabInstance: {fileID: 1052716588}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6737819f7f9b3ba48b00b14f0d875b6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1221194881
 GameObject:
   m_ObjectHideFlags: 0
@@ -2995,6 +3010,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5091898219608751890, guid: fb1ce813e4934984abd876563bee6819, type: 3}
   m_PrefabInstance: {fileID: 1495969573}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1519731184 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2430393987549173630, guid: 51305195bfc194547ad22b7f13f7c35c, type: 3}
+  m_PrefabInstance: {fileID: 1052716588}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6737819f7f9b3ba48b00b14f0d875b6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1535218038 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6452379864075558401, guid: 296abee87a9979a5ca4cc021c2bc1474, type: 3}
@@ -3468,6 +3494,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RifleAmmoBox
       objectReference: {fileID: 0}
+    - target: {fileID: 6025648241819263665, guid: be97423f3462d554480d5b40d3cc5ee3, type: 3}
+      propertyPath: ammo
+      value: 
+      objectReference: {fileID: 1519731184}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be97423f3462d554480d5b40d3cc5ee3, type: 3}
 --- !u!1 &1792407229
@@ -3912,7 +3942,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1021544532120199374, guid: 635a2431638add04fa7133bd010ef054, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 635a2431638add04fa7133bd010ef054, type: 3}
