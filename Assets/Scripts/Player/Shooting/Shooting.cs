@@ -14,7 +14,7 @@ public class Shooting : MonoBehaviour
 
     [Header("Weapon Types")]
 
-     public int _allBullets;
+    public int _allBullets;
     [SerializeField] private int _magazineSize;
     [SerializeField] private int _bulletsLeft;
     [SerializeField] private float _reloadTime;

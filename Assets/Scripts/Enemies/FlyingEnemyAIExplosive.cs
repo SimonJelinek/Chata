@@ -9,7 +9,7 @@ public class FlyingEnemyAIExplosive : MonoBehaviour
     public GameObject _explosion;
     public GameObject _explosionParticles;
     private Transform _player;
-    public Transform[] _moveSpots;
+    //public Transform[] _moveSpots;
 
     [Header("Enemy Variables")]
     [SerializeField] private float _enemySpeed;
@@ -35,7 +35,7 @@ public class FlyingEnemyAIExplosive : MonoBehaviour
 
     void Start()
     {
-        _randomSpot = Random.Range(0, _moveSpots.Length);
+        //_randomSpot = Random.Range(0, _moveSpots.Length);
         _waitTime = _startWaitTime;
 
         /* _explosionCollider = GetComponentInChildren<CircleCollider2D>();
@@ -69,7 +69,7 @@ public class FlyingEnemyAIExplosive : MonoBehaviour
                     Debug.Log("Hit wall");
                 }
             }
-            Patroling();
+          // Patroling();
         }
 
         if (_inSight == true)
@@ -119,7 +119,7 @@ public class FlyingEnemyAIExplosive : MonoBehaviour
 
     }
 
-    private void Patroling()
+   /* private void Patroling()
     {
         transform.position = Vector2.MoveTowards(transform.position, _moveSpots[_randomSpot].position, _enemySpeedPatroling * Time.deltaTime);
 
@@ -135,7 +135,7 @@ public class FlyingEnemyAIExplosive : MonoBehaviour
                 _waitTime -= Time.deltaTime;
             }
         }
-    }
+    }*/
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
