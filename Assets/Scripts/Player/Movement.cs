@@ -9,13 +9,13 @@ public class Movement : MonoBehaviour
     public Transform _feetPos;
     public ParticleSystem dustParticles;
     private ParticleSystem.EmissionModule dustParticlesEmission;
-    public SpriteRenderer sr;
     private Rigidbody2D _rb;
     public GameObject _onDropDustEffect;
     private AudioSource _source;
     public AudioClip _landingSound;
     public AudioClip _footsteps;
     public AudioClip _jumpingSound;
+    private Animator animator;
 
     [Header("Movement Variables")]
 
@@ -24,6 +24,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private float _linearDrag;
     private float _horizontalDirection;
     private bool _changingDirections => (_rb.velocity.x > 0f && _horizontalDirection < 0f) || (_rb.velocity.x < 0f && _horizontalDirection > 0f);
+    [HideInInspector] public bool isAlive;
 
     [Header("Jumping Variables")]
 
@@ -45,12 +46,16 @@ public class Movement : MonoBehaviour
     private float _hangTimeCounter;
     [SerializeField] private float _bufferTime;
     private float _bufferTimeCounter;
+    public float knockbackFreezeTimeCounter;
 
     private void Start()
     {
         _source = GetComponent<AudioSource>();
         _rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         dustParticlesEmission = dustParticles.emission;
+        _source.volume = PlayerPrefs.GetFloat("Volume");
+        isAlive = true;
     }
 
     private void Update()
@@ -58,7 +63,7 @@ public class Movement : MonoBehaviour
         if(_horizontalDirection != 0 && _isGrounded && _source.isPlaying == false)
         {
             _source.clip = _footsteps;
-            _source.volume = Random.Range(0.8f, 0.3f);
+            //_source.volume = Random.Range(0.8f, 0.3f);
             _source.pitch = Random.Range(1f, 0.9f);
             _source.Play();
         }
@@ -73,7 +78,7 @@ public class Movement : MonoBehaviour
             if(_spawnDustOnLand == true)
             {
                 _source.clip = _landingSound;
-                _source.volume = Random.Range(1, 0.6f);
+                //_source.volume = Random.Range(1, 0.6f);
                 _source.Play();
                 Instantiate(_onDropDustEffect, _feetPos.position, Quaternion.identity);
                 _spawnDustOnLand = false;
@@ -89,7 +94,7 @@ public class Movement : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
         {
             _bufferTimeCounter = _bufferTime;
         }
@@ -99,7 +104,7 @@ public class Movement : MonoBehaviour
         }
 
 
-        if (_hangTimeCounter > 0f && _bufferTimeCounter > 0)
+        if (_hangTimeCounter > 0f && _bufferTimeCounter > 0 && isAlive)
         {
             EffectsOnJump();
 
@@ -110,7 +115,7 @@ public class Movement : MonoBehaviour
             _rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
         }
 
-        if (Input.GetKey(KeyCode.Space) && _isJumping == true)
+        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space)) && _isJumping == true)
         {
             if (_jumpTimeCounter > 0)
             {
@@ -122,26 +127,35 @@ public class Movement : MonoBehaviour
             {
                 _isJumping = false;
             }
-
         }
 
-        if (Input.GetKeyUp(KeyCode.Space))
+
+        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.Space))
         {
             _isJumping = false;
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            App.inGameScreen_NEW.ShowPauseScreen();
+        }
+
+        animator.SetFloat("velocityY", _rb.velocity.y);
+        animator.SetBool("isGrounded", _isGrounded);
     }
 
     private void FixedUpdate()
     {
-        MoveCharacter();
-
-        if (_horizontalDirection > 0)
+        if(knockbackFreezeTimeCounter <= 0)
         {
-            sr.flipX = false;
+            if(isAlive)
+            {
+                MoveCharacter();
+            }
         }
-        else if (_horizontalDirection < 0)
+        else
         {
-            sr.flipX = true;
+            knockbackFreezeTimeCounter -= Time.fixedDeltaTime;
         }
 
         if (_isGrounded)
@@ -169,10 +183,12 @@ public class Movement : MonoBehaviour
         if(GetInput().x != 0 && _isGrounded)
         {
             dustParticlesEmission.rateOverTime = 35f;
+            animator.SetBool("isWalking", true);
         }
         else
         {
             dustParticlesEmission.rateOverTime = 0f;
+            animator.SetBool("isWalking", false);
         }
 
         if (Mathf.Abs(_rb.velocity.x) > _maxMoveSpeed)
@@ -204,7 +220,7 @@ public class Movement : MonoBehaviour
         {
             _rb.gravityScale = _fallMultiplier;
         }
-        else if (_rb.velocity.y > 0 && !Input.GetKeyDown(KeyCode.Space))
+        else if (_rb.velocity.y > 0 && !Input.GetKeyDown(KeyCode.W))
         {
             _rb.gravityScale = _lowJumpFallMultiplier;
         }
@@ -218,7 +234,7 @@ public class Movement : MonoBehaviour
     {
         _source.clip = _jumpingSound;
         _source.pitch = Random.Range(1f, 0.9f);
-        _source.volume = Random.Range(1, 0.6f);
+        //_source.volume = Random.Range(1, 0.6f);
         _source.Play();
         Instantiate(_onDropDustEffect, _feetPos.position, Quaternion.identity);
     }

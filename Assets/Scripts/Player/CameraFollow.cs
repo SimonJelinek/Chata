@@ -14,26 +14,28 @@ public class CameraFollow : MonoBehaviour
     private Vector3 mousePos;
 
 
-    void Start()
+    void Awake()
     {
-        offset.y = 0.75f;
-        lookAheadAmount.x = 3.2f;
-        speed = 1.6f;
+        App.cameraFollow = this;
     }
 
     private void Update()
     {   
         mousePos = GetComponent<Camera>().ScreenToWorldPoint(Input.mousePosition);
 
-        if(mousePos.x > target.position.x)
+        if (target != null)
         {
-            direction = 1;
-        }
-        if(mousePos.x < target.position.x)
-        {
-            direction = -1;
-        }
-        
+            if (mousePos.x > target.position.x)
+            {
+                direction = 1;
+                target.rotation = Quaternion.Euler(0, 0, 0);
+            }
+            if (mousePos.x < target.position.x)
+            {
+                direction = -1;
+                target.rotation = Quaternion.Euler(0, 180, 0);
+            }
+        }        
     }
 
     void FixedUpdate()
@@ -54,5 +56,9 @@ public class CameraFollow : MonoBehaviour
         */
     }
 
-
+    public void ChangeCamera(float cameraSpeed, float yOffset)
+    {
+        speed = cameraSpeed;
+        offset.y = yOffset;
+    }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlyingEnemyAI : MonoBehaviour
+public class FlyingEnemyAI : BaseEnemy
 {
     [Header("Components")]
     public GameObject _bullet;
@@ -25,14 +25,16 @@ public class FlyingEnemyAI : MonoBehaviour
     
     
     [Header("Health")]
-    [SerializeField] private float _maxHealth;
+    // [SerializeField] private float _maxHealth; - v BaseEnemy
     private float _health;
     private Material _defMat;
     public Material _flashMat;
     private SpriteRenderer _sr;
 
-    void Start()
+    public override void Start()
     {
+        base.Start();
+
         _randomSpot = Random.Range(0, _moveSpots.Length);
         _waitTime = _startWaitTime;
 
@@ -40,13 +42,13 @@ public class FlyingEnemyAI : MonoBehaviour
         //_flashMat = Resources.Load("Flash", typeof(Material)) as Material;
         _defMat = _sr.material;
 
-        _health = _maxHealth;
+        // _health = _maxHealth; - v BaseEnemy
         _player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    void Update()
-    { 
-
+    public override void Update()
+    {
+        base.Update();
         RaycastHit2D hit = Physics2D.Linecast(gameObject.transform.position, _player.transform.position, 1 << LayerMask.NameToLayer("Ground"));
 
         if (following == false)
@@ -73,11 +75,12 @@ public class FlyingEnemyAI : MonoBehaviour
             Spotted();
         }
 
-        if(_health <= 0)
+        /*if(_health <= 0)
         {
             OnDeath();
-        }
-
+        } 
+        - v BaseEnemy
+        */
     }
 
     private void OnDrawGizmosSelected()
@@ -126,12 +129,14 @@ public class FlyingEnemyAI : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    /*public override void OnTriggerEnter2D(Collider2D collision)
     {
+        base.OnTriggerEnter2D(collision);
         if (collision.gameObject.CompareTag("Bullet"))
         {
             _sr.material = _flashMat;
-            _health--;
+
+            // _health--; - v BaseEnemy
 
             if(_health > 0)
             {
@@ -139,15 +144,20 @@ public class FlyingEnemyAI : MonoBehaviour
             }
         }
     }
+    // - flash sa bude riesit v BaseEnemy
+    */
 
-    private void ResetMaterial()
+    /*private void ResetMaterial()
     {
         _sr.material = _defMat;
     }
+    - pojde do BaseEnemy
+     */
 
-    private void OnDeath()
+    /*private void OnDeath()
     {
         Destroy(gameObject);
     }
-
+    - v BaseEnemy
+     */
 }

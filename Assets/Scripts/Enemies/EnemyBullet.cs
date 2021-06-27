@@ -39,7 +39,7 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Ammo"))
+        if (collision.CompareTag("Ammo") || collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Checkpoint"))
         {
 
         }
@@ -52,7 +52,7 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Bullet"))
+        if (other.gameObject.CompareTag("Bullet") || other.gameObject.CompareTag("Enemy"))
         {
 
         }

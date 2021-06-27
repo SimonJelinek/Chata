@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StaticEnemy : MonoBehaviour
+public class StaticEnemy : BaseEnemy
 {
     public GameObject staticEnemyBullet;
     public int numberOfBullets;
@@ -20,12 +20,15 @@ public class StaticEnemy : MonoBehaviour
 
     float xPos;
     bool shooting = false;
-    private void Start()
+
+    public override void Start()
     {
+        base.Start();
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
-    void Update()
+    public override void Update()
     {
+        base.Update();
         if (shooting)
         {
             time += Time.deltaTime;
@@ -78,4 +81,5 @@ public class StaticEnemy : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
+
 }

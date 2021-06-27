@@ -34,7 +34,7 @@ public class StaticEnemyBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Ammo"))
+        if (collision.CompareTag("Ammo") || collision.CompareTag("Enemy"))
         {
 
         }
@@ -45,8 +45,8 @@ public class StaticEnemyBullet : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    /*private void OnCollisionEnter2D(Collision2D other)
     {
         Destroy(gameObject);
-    }
+    }*/
 }
