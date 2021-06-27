@@ -15,7 +15,7 @@ public class box : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
-    {
+    {       
         if(_ammoChance > 0 && _ammoChance <= 3)
         {
             Instantiate(_pistolAmmo, transform.position, Quaternion.identity);

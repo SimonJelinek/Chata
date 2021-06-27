@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 484735208046660302}
   - component: {fileID: 484735208046660301}
   - component: {fileID: 484735208046660300}
-  - component: {fileID: 484735208046660303}
+  - component: {fileID: 9040395109982222516}
   m_Layer: 0
   m_Name: PistolAmmoBox
   m_TagString: Ammo
@@ -110,7 +110,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10.028536, y: 8.03944}
   m_EdgeRadius: 0
---- !u!114 &484735208046660303
+--- !u!114 &9040395109982222516
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,7 +119,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 484735208046660307}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37f5b5763da952c40973fddd5c053dea, type: 3}
+  m_Script: {fileID: 11500000, guid: 2db6f8ce0a5d34f4bbe0fe6a53e7d7ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ammo: 15

@@ -13,6 +13,8 @@ TagManager:
   - Checkpoint1
   - Checkpoint2
   - Checkpoint3
+  - Boss
+  - Box
   layers:
   - Default
   - TransparentFX
