@@ -94,7 +94,7 @@ public class Movement : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
         {
             _bufferTimeCounter = _bufferTime;
         }
@@ -115,7 +115,7 @@ public class Movement : MonoBehaviour
             _rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
         }
 
-        if (Input.GetKey(KeyCode.Space) && _isJumping == true)
+        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space)) && _isJumping == true)
         {
             if (_jumpTimeCounter > 0)
             {
@@ -130,7 +130,7 @@ public class Movement : MonoBehaviour
         }
 
 
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.Space))
         {
             _isJumping = false;
         }
@@ -220,7 +220,7 @@ public class Movement : MonoBehaviour
         {
             _rb.gravityScale = _fallMultiplier;
         }
-        else if (_rb.velocity.y > 0 && !Input.GetKeyDown(KeyCode.Space))
+        else if (_rb.velocity.y > 0 && !Input.GetKeyDown(KeyCode.W))
         {
             _rb.gravityScale = _lowJumpFallMultiplier;
         }
