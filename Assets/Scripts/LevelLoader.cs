@@ -26,7 +26,7 @@ public class LevelLoader : MonoBehaviour
 
     public void Reset() 
     {
-        PlayerPrefs.DeleteAll();
+        PlayerPrefs.SetInt("levelAt",1);
     }
 
     IEnumerator LoadScene(string sceneName)
