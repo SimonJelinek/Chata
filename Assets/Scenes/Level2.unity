@@ -2372,7 +2372,7 @@ PrefabInstance:
     - target: {fileID: 4423952810701909232, guid: 1dd851872c35f3441bd3dc905c54aa91, type: 3}
       propertyPath: crosshair
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1264971187552263520}
     - target: {fileID: 4423952810701909232, guid: 1dd851872c35f3441bd3dc905c54aa91, type: 3}
       propertyPath: pauseScreen
       value: 
