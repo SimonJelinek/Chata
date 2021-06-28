@@ -240,10 +240,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RifleAmmoBox
       objectReference: {fileID: 0}
-    - target: {fileID: 6025648241819263665, guid: be97423f3462d554480d5b40d3cc5ee3, type: 3}
-      propertyPath: ammo
-      value: 
-      objectReference: {fileID: 1264971186764845134}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be97423f3462d554480d5b40d3cc5ee3, type: 3}
 --- !u!1 &297684675
@@ -1011,10 +1007,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RifleAmmoBox (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 6025648241819263665, guid: be97423f3462d554480d5b40d3cc5ee3, type: 3}
-      propertyPath: ammo
-      value: 
-      objectReference: {fileID: 1264971186764845134}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be97423f3462d554480d5b40d3cc5ee3, type: 3}
 --- !u!114 &1261646933 stripped
