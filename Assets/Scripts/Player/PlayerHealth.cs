@@ -118,7 +118,7 @@ public class PlayerHealth : MonoBehaviour
 
     void LavaTrigger()
     {
-        _healthCount -= 2;
+        _healthCount -= 1;
         UpdateUI();
 
         HealthCheck();
