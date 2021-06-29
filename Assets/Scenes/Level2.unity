@@ -134,10 +134,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Health Box (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 8108518671571236184, guid: 73ff81cb4aec7ba4b8ca2e490fe82fe5, type: 3}
-      propertyPath: m_TagString
-      value: Health
-      objectReference: {fileID: 0}
     - target: {fileID: 8108518671571236188, guid: 73ff81cb4aec7ba4b8ca2e490fe82fe5, type: 3}
       propertyPath: m_RootOrder
       value: 31
@@ -184,23 +180,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73ff81cb4aec7ba4b8ca2e490fe82fe5, type: 3}
---- !u!1 &1959264 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8108518671571236184, guid: 73ff81cb4aec7ba4b8ca2e490fe82fe5, type: 3}
-  m_PrefabInstance: {fileID: 1959263}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1959265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57f802f38057681479845f19c0462671, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &54924302
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 8108518671571236189}
   - component: {fileID: 8108518671571236190}
   - component: {fileID: 8108518671571236191}
+  - component: {fileID: 1959265}
   m_Layer: 0
   m_Name: Health
-  m_TagString: Box
+  m_TagString: Health
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,3 +132,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1959265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8108518671571236184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57f802f38057681479845f19c0462671, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
