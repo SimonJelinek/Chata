@@ -105,19 +105,12 @@ MonoBehaviour:
   shotgunAmmoBox: {fileID: 1206988941485492470, guid: ba23705e32eaa8f4ea5904f80b60bf71, type: 3}
   _bullet: {fileID: 5168333461257911401, guid: fdbbf127ee16613498f3f0b85bf68c26, type: 3}
   _firePoint: {fileID: 4815734513201534246}
-  _moveSpots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   _nextFireTime: 0
-  _fireRate: 1.5
+  _fireRate: 1
   _enemySpeed: 2
   _enemySpeedPatroling: 1.5
-  _lineOfSight: 7
-  _shootingRange: 2.5
+  _lineOfSight: 10
+  _shootingRange: 5
   _startWaitTime: 2
   _flashMat: {fileID: 2100000, guid: d6d03618cbbdd0e47bf6e5134e19b6a1, type: 2}
 --- !u!61 &4815734511853250316
