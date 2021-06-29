@@ -10,6 +10,7 @@ public class FlyingEnemyAIExplosive : MonoBehaviour
     public GameObject _explosionParticles;
     private Transform _player;
     //public Transform[] _moveSpots;
+    private Animator _anim;
 
     [Header("Enemy Variables")]
     [SerializeField] private float _enemySpeed;
@@ -35,6 +36,8 @@ public class FlyingEnemyAIExplosive : MonoBehaviour
 
     void Start()
     {
+        _anim = GetComponent<Animator>();
+
         //_randomSpot = Random.Range(0, _moveSpots.Length);
         _waitTime = _startWaitTime;
 
@@ -99,6 +102,7 @@ public class FlyingEnemyAIExplosive : MonoBehaviour
         {
             if (_exploding2 == true)
             {
+                _anim.SetTrigger("Boom");
                 _exploding2 = false;
                 Invoke("Explode", _chargeTime);
             }
@@ -159,7 +163,7 @@ public class FlyingEnemyAIExplosive : MonoBehaviour
     private void Explode()
     {       
             _sr.material = _flashMat;
-            Instantiate(_explosionParticles, gameObject.transform.position, Quaternion.identity);
+            //Instantiate(_explosionParticles, gameObject.transform.position, Quaternion.identity);
             _explosion.SetActive(true);
             Destroy(gameObject, 0.1f);       
     }

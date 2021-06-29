@@ -8,6 +8,7 @@ public class FlyingEnemyAI : BaseEnemy
     public GameObject _bullet;
     public GameObject _firePoint;
     //public Transform[] _moveSpots;
+    private Animator _anim;
 
     [Header("Enemy Variables")]
     [SerializeField] private float _nextFireTime;
@@ -33,6 +34,7 @@ public class FlyingEnemyAI : BaseEnemy
 
     public override void Start()
     {
+        _anim = GetComponent<Animator>();
         base.Start();
 
         //_randomSpot = Random.Range(0, _moveSpots.Length);
@@ -56,14 +58,14 @@ public class FlyingEnemyAI : BaseEnemy
             if (hit.collider == null)
             {
                 _inSight = true;
-                Debug.Log("Player in sight");
+               // Debug.Log("Player in sight");
             }
             else
             {
                 if (hit.collider.gameObject.layer == 8)
                 {
                     _inSight = false;
-                    Debug.Log("Hit wall");
+                    //Debug.Log("Hit wall");
                 }
             }
             //Patroling();
@@ -101,6 +103,7 @@ public class FlyingEnemyAI : BaseEnemy
         }
         else if (_distanceFromPlayer <= _shootingRange && _nextFireTime < Time.time)
         {
+            _anim.SetTrigger("Shoot");
             Instantiate(_bullet, _firePoint.transform.position, Quaternion.identity);
             _nextFireTime = Time.time + _fireRate;
         }
