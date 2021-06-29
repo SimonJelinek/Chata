@@ -7,7 +7,7 @@ public class FlyingEnemyAI : BaseEnemy
     [Header("Components")]
     public GameObject _bullet;
     public GameObject _firePoint;
-    public Transform[] _moveSpots;
+    //public Transform[] _moveSpots;
 
     [Header("Enemy Variables")]
     [SerializeField] private float _nextFireTime;
@@ -35,7 +35,7 @@ public class FlyingEnemyAI : BaseEnemy
     {
         base.Start();
 
-        _randomSpot = Random.Range(0, _moveSpots.Length);
+        //_randomSpot = Random.Range(0, _moveSpots.Length);
         _waitTime = _startWaitTime;
 
         _sr = GetComponent<SpriteRenderer>();
@@ -66,7 +66,7 @@ public class FlyingEnemyAI : BaseEnemy
                     Debug.Log("Hit wall");
                 }
             }
-            Patroling();
+            //Patroling();
         }
 
         if (_inSight == true)
@@ -111,7 +111,7 @@ public class FlyingEnemyAI : BaseEnemy
         }
     }
 
-    private void Patroling()
+   /* private void Patroling()
     {
         transform.position = Vector2.MoveTowards(transform.position, _moveSpots[_randomSpot].position, _enemySpeedPatroling * Time.deltaTime);
 
@@ -127,7 +127,7 @@ public class FlyingEnemyAI : BaseEnemy
                 _waitTime -= Time.deltaTime;
             }
         }
-    }
+    }*/
 
     /*public override void OnTriggerEnter2D(Collider2D collision)
     {

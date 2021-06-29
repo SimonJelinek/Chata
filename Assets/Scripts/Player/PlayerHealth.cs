@@ -99,11 +99,21 @@ public class PlayerHealth : MonoBehaviour
 
             HealthCheck();
 
-            if(_healthCount > 0)
+            if (_healthCount > 0)
             {
                 Knockback();
             }
         }
+
+        if (collision.gameObject.CompareTag("Health"))
+        {
+            _healthCount += 2;
+            UpdateUI();
+
+            HealthCheck();
+        }
+
+
     }
 
     void LavaTrigger()

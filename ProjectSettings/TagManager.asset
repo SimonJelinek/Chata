@@ -16,6 +16,9 @@ TagManager:
   - LevelPass
   - Offset
   - Doska
+  - Box
+  - Boss
+  - Health
   layers:
   - Default
   - TransparentFX
