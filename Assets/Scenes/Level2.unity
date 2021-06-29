@@ -1882,6 +1882,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1696582495}
+    - target: {fileID: 7447165298093460004, guid: 3506d503503a75b4e833451b6220d1b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Level2
+      objectReference: {fileID: 0}
     - target: {fileID: 7447165298787108101, guid: 3506d503503a75b4e833451b6220d1b8, type: 3}
       propertyPath: m_Name
       value: GameOverScreen
@@ -5442,6 +5446,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 537679986235735143, guid: 6a009d0453b7c844e9c8a4603970fb45, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.68
+      objectReference: {fileID: 0}
     - target: {fileID: 2496396573546528740, guid: 6a009d0453b7c844e9c8a4603970fb45, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.08
