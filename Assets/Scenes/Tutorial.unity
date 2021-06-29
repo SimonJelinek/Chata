@@ -2071,6 +2071,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player v.2
       objectReference: {fileID: 0}
+    - target: {fileID: 5121907092725720307, guid: 51305195bfc194547ad22b7f13f7c35c, type: 3}
+      propertyPath: _reloadingText
+      value: 
+      objectReference: {fileID: 1344490402}
+    - target: {fileID: 5121907092725720307, guid: 51305195bfc194547ad22b7f13f7c35c, type: 3}
+      propertyPath: _ammunitionDisplay
+      value: 
+      objectReference: {fileID: 1344490403}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51305195bfc194547ad22b7f13f7c35c, type: 3}
 --- !u!4 &1052716589 stripped
