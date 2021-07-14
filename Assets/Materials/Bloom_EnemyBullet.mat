@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Bloom_Bullet
+  m_Name: Bloom_EnemyBullet
   m_Shader: {fileID: -6465566751694194690, guid: ab8ac10ced80421488374e6ef9eff292, type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
@@ -29,5 +29,5 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats: []
     m_Colors:
-    - Color_462536F1: {r: 13.283019, g: 6.05038, b: 0, a: 0}
+    - Color_462536F1: {r: 1.1979221, g: 8.47419, b: 0, a: 0}
   m_BuildTextureStacks: []
