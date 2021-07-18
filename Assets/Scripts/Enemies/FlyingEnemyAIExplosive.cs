@@ -69,7 +69,7 @@ public class FlyingEnemyAIExplosive : MonoBehaviour
                 if (hit.collider.gameObject.layer == 8)
                 {
                     _inSight = false;
-                    Debug.Log("Hit wall");
+
                 }
             }
           // Patroling();
