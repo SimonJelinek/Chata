@@ -83,7 +83,6 @@ GameObject:
   - component: {fileID: 6049897854875895853}
   - component: {fileID: 6049897854875895852}
   - component: {fileID: 6049897854875895855}
-  - component: {fileID: 6049897854875895854}
   - component: {fileID: 6049897854875895842}
   m_Layer: 0
   m_Name: Box Standing
@@ -168,7 +167,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.39064217, y: -0.31056726}
@@ -184,27 +183,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8.833809, y: 5.5568495}
   m_EdgeRadius: 0
---- !u!50 &6049897854875895854
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6049897854875895849}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &6049897854875895842
 MonoBehaviour:
   m_ObjectHideFlags: 0
