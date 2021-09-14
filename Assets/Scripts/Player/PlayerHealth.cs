@@ -77,6 +77,14 @@ public class PlayerHealth : MonoBehaviour
         {
             App.cameraFollow.ChangeCamera(1.6f, 2.15f);
         }
+
+        if (collision.gameObject.CompareTag("Health"))
+        {
+            _healthCount += 2;
+            UpdateUI();
+
+            HealthCheck();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -104,16 +112,6 @@ public class PlayerHealth : MonoBehaviour
                 Knockback();
             }
         }
-
-        if (collision.gameObject.CompareTag("Health"))
-        {
-            _healthCount += 2;
-            UpdateUI();
-
-            HealthCheck();
-        }
-
-
     }
 
     void LavaTrigger()
