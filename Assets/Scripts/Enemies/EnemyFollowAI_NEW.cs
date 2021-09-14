@@ -16,7 +16,7 @@ public class EnemyFollowAI_NEW : BaseEnemy
     public float jumpForce;
 
     private int layerMask;
-    private Vector3 dir;
+    private Vector2 dir;
     private float offset;
     private Rigidbody2D rb;
     private int direction;
@@ -61,8 +61,8 @@ public class EnemyFollowAI_NEW : BaseEnemy
 
     public bool CanSeePlayer()
     {
-        dir = (player.position - transform.position);
-        dir.Normalize();
+        dir = (player.position - eyes.position);
+        // dir.Normalize();
         RaycastHit2D hit = Physics2D.Raycast(eyes.position, dir, seeDistance, layerMask);
         Debug.DrawRay(eyes.position, dir, Color.blue);
 
