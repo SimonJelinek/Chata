@@ -99,7 +99,7 @@ public class FlyingEnemyAI : BaseEnemy
         if (_distanceFromPlayer < _lineOfSight && _distanceFromPlayer > _shootingRange)
         {
             transform.position = Vector2.MoveTowards(this.transform.position, _player.position, _enemySpeed * Time.deltaTime);
-            _lineOfSight = 11;
+            _lineOfSight = 13;
         }
         else if (_distanceFromPlayer <= _shootingRange && _nextFireTime < Time.time)
         {
@@ -110,7 +110,7 @@ public class FlyingEnemyAI : BaseEnemy
         else
         {
             following = false;
-            _lineOfSight = 7;
+            _lineOfSight = 10;
         }
     }
 
