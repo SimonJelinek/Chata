@@ -673,34 +673,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &364334055 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2430393987689764938, guid: 51305195bfc194547ad22b7f13f7c35c, type: 3}
-  m_PrefabInstance: {fileID: 1052716588}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &364334064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 364334055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49d31d74cfc93f640814a9663fbfb134, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dosky:
-  - {fileID: 1023717488}
-  - {fileID: 1862934798}
-  - {fileID: 978482581}
-  - {fileID: 788036385}
-  - {fileID: 1234801358}
-  - {fileID: 1116313496}
-  podlaha: {fileID: 180868766}
-  podlahaCollider: {fileID: 180868769}
-  doska1Collider: {fileID: 1023717491}
-  doska2Collider: {fileID: 1862934801}
 --- !u!1 &416861989
 GameObject:
   m_ObjectHideFlags: 0
@@ -2028,6 +2000,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 364334064, guid: 51305195bfc194547ad22b7f13f7c35c, type: 3}
+      propertyPath: podlaha
+      value: 
+      objectReference: {fileID: 180868766}
+    - target: {fileID: 364334064, guid: 51305195bfc194547ad22b7f13f7c35c, type: 3}
+      propertyPath: doska1Collider
+      value: 
+      objectReference: {fileID: 1023717491}
+    - target: {fileID: 364334064, guid: 51305195bfc194547ad22b7f13f7c35c, type: 3}
+      propertyPath: doska2Collider
+      value: 
+      objectReference: {fileID: 1862934801}
+    - target: {fileID: 364334064, guid: 51305195bfc194547ad22b7f13f7c35c, type: 3}
+      propertyPath: podlahaCollider
+      value: 
+      objectReference: {fileID: 180868769}
+    - target: {fileID: 364334064, guid: 51305195bfc194547ad22b7f13f7c35c, type: 3}
+      propertyPath: dosky.Array.data[0]
+      value: 
+      objectReference: {fileID: 1023717488}
+    - target: {fileID: 364334064, guid: 51305195bfc194547ad22b7f13f7c35c, type: 3}
+      propertyPath: dosky.Array.data[1]
+      value: 
+      objectReference: {fileID: 1862934798}
+    - target: {fileID: 364334064, guid: 51305195bfc194547ad22b7f13f7c35c, type: 3}
+      propertyPath: dosky.Array.data[2]
+      value: 
+      objectReference: {fileID: 978482581}
+    - target: {fileID: 364334064, guid: 51305195bfc194547ad22b7f13f7c35c, type: 3}
+      propertyPath: dosky.Array.data[3]
+      value: 
+      objectReference: {fileID: 788036385}
+    - target: {fileID: 364334064, guid: 51305195bfc194547ad22b7f13f7c35c, type: 3}
+      propertyPath: dosky.Array.data[4]
+      value: 
+      objectReference: {fileID: 1234801358}
+    - target: {fileID: 364334064, guid: 51305195bfc194547ad22b7f13f7c35c, type: 3}
+      propertyPath: dosky.Array.data[5]
+      value: 
+      objectReference: {fileID: 1116313496}
     - target: {fileID: 170341021712700690, guid: 51305195bfc194547ad22b7f13f7c35c, type: 3}
       propertyPath: _healthUI
       value: 
@@ -2036,10 +2048,6 @@ PrefabInstance:
       propertyPath: crossHair
       value: 
       objectReference: {fileID: 1535218038}
-    - target: {fileID: 170341021712700690, guid: 51305195bfc194547ad22b7f13f7c35c, type: 3}
-      propertyPath: _maxHealth
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 170341021712700690, guid: 51305195bfc194547ad22b7f13f7c35c, type: 3}
       propertyPath: ingameScreen
       value: 
@@ -2056,14 +2064,6 @@ PrefabInstance:
       propertyPath: _ammunitionDisplay
       value: 
       objectReference: {fileID: 1344490403}
-    - target: {fileID: 2430393986631218324, guid: 51305195bfc194547ad22b7f13f7c35c, type: 3}
-      propertyPath: _reloadingText
-      value: 
-      objectReference: {fileID: 1344490402}
-    - target: {fileID: 2430393986631218324, guid: 51305195bfc194547ad22b7f13f7c35c, type: 3}
-      propertyPath: _ammunitionDisplay
-      value: 
-      objectReference: {fileID: 1344490403}
     - target: {fileID: 2430393987549173630, guid: 51305195bfc194547ad22b7f13f7c35c, type: 3}
       propertyPath: _reloadingText
       value: 
@@ -2072,25 +2072,9 @@ PrefabInstance:
       propertyPath: _ammunitionDisplay
       value: 
       objectReference: {fileID: 1344490403}
-    - target: {fileID: 2430393987689764916, guid: 51305195bfc194547ad22b7f13f7c35c, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2430393987689764919, guid: 51305195bfc194547ad22b7f13f7c35c, type: 3}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2430393987689764919, guid: 51305195bfc194547ad22b7f13f7c35c, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.23433965
-      objectReference: {fileID: 0}
-    - target: {fileID: 2430393987689764919, guid: 51305195bfc194547ad22b7f13f7c35c, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.23433965
-      objectReference: {fileID: 0}
-    - target: {fileID: 2430393987689764919, guid: 51305195bfc194547ad22b7f13f7c35c, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.23433965
       objectReference: {fileID: 0}
     - target: {fileID: 2430393987689764919, guid: 51305195bfc194547ad22b7f13f7c35c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2186,7 +2170,7 @@ MonoBehaviour:
   m_Color: {r: 0.7924528, g: 0.74369264, b: 0.48967603, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 0730a9952fa59719d1a1551dffba8398d11257a673863a37bfa78c4500000000
+  m_ApplyToSortingLayers: 0730a9952fa59719d1a1551dffba8398d11257a673863a3700000000
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -2708,7 +2692,7 @@ MonoBehaviour:
   m_Color: {r: 0.7924528, g: 0.74369264, b: 0.48967603, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 0730a9952fa59719d1a1551dffba8398d11257a673863a37bfa78c4500000000
+  m_ApplyToSortingLayers: 0730a9952fa59719d1a1551dffba8398d11257a673863a3700000000
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -3624,7 +3608,7 @@ MonoBehaviour:
   m_Color: {r: 0.7924528, g: 0.74369264, b: 0.48967603, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 0730a9952fa59719d1a1551dffba8398d11257a673863a37bfa78c4500000000
+  m_ApplyToSortingLayers: 0730a9952fa59719d1a1551dffba8398d11257a673863a3700000000
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
