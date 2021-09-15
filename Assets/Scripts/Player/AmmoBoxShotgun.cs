@@ -8,7 +8,7 @@ public class AmmoBoxShotgun : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            GameObject.Find("Shotgun").GetComponent<Shooting>()._allBullets += 10;
+            GameObject.Find("Shotgun").GetComponent<Shooting>()._allBullets += 15;
             Destroy(gameObject);
         }
     }

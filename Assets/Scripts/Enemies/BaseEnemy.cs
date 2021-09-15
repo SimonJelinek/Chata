@@ -62,15 +62,15 @@ public class BaseEnemy : MonoBehaviour
     public void DestroyEnemy()
     {
         randomFactor = Random.Range(1, 100);
-        if (randomFactor > 30)
+        if (randomFactor > 20)
         {
-            randomFactor2 = Random.Range(0, 2);
-            if (randomFactor2 == 0)
+            randomFactor2 = Random.Range(1, 100);
+            if (randomFactor2 < 65)
             {
                 rifleAmmoBox.transform.parent = null;
                 rifleAmmoBox.SetActive(true);
             }
-            if (randomFactor2 == 1)
+            else
             {
                 shotgunAmmoBox.transform.parent = null;
                 shotgunAmmoBox.SetActive(true);
