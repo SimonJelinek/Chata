@@ -11,24 +11,24 @@ public class box : MonoBehaviour
 
     void Start()
     {
-        _ammoChance = Random.Range(0, 6);
+        _ammoChance = Random.Range(0, 8);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {       
         if(collision.gameObject.CompareTag("Player"))
         {
-            if (_ammoChance > 0 && _ammoChance <= 3)
-            {
-                Instantiate(_pistolAmmo, transform.position, Quaternion.identity);
-            }
-            else if (_ammoChance > 3 && _ammoChance <= 5)
+            if (_ammoChance >= 0 && _ammoChance <= 3)
             {
                 Instantiate(_rifleAmmo, transform.position, Quaternion.identity);
             }
-            else
+            else if (_ammoChance > 3 && _ammoChance <= 6)
             {
                 Instantiate(_shotgunAmmo, transform.position, Quaternion.identity);
+            }
+            else
+            {
+                Instantiate(_pistolAmmo, transform.position, Quaternion.identity);
             }
             Destroy(this.gameObject);
         }

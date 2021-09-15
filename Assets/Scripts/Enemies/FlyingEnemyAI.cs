@@ -23,6 +23,8 @@ public class FlyingEnemyAI : BaseEnemy
     private bool _inSight = false;
     private bool following = false;
     private float _waitTime;
+    private int dir;
+    private bool lookingLeft;
     
     
     [Header("Health")]
@@ -46,6 +48,8 @@ public class FlyingEnemyAI : BaseEnemy
 
         // _health = _maxHealth; - v BaseEnemy
         _player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        lookingLeft = true;
     }
 
     public override void Update()
@@ -73,6 +77,21 @@ public class FlyingEnemyAI : BaseEnemy
 
         if (_inSight == true)
         {
+            if(_player.position.x > transform.position.x && lookingLeft)
+            {
+                transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+                transform.rotation = Quaternion.AngleAxis(-14f, Vector3.forward);
+                lookingLeft = !lookingLeft;
+            }
+            if(_player.position.x < transform.position.x && !lookingLeft)
+            {
+                transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+                transform.rotation = Quaternion.AngleAxis(14f, Vector3.forward);
+                lookingLeft = !lookingLeft;
+                
+            }
+
+
             following = true;
             Spotted();
         }
@@ -83,6 +102,8 @@ public class FlyingEnemyAI : BaseEnemy
         } 
         - v BaseEnemy
         */
+
+        
     }
 
     private void OnDrawGizmosSelected()
@@ -99,7 +120,7 @@ public class FlyingEnemyAI : BaseEnemy
         if (_distanceFromPlayer < _lineOfSight && _distanceFromPlayer > _shootingRange)
         {
             transform.position = Vector2.MoveTowards(this.transform.position, _player.position, _enemySpeed * Time.deltaTime);
-            _lineOfSight = 13;
+            _lineOfSight = 14;
         }
         else if (_distanceFromPlayer <= _shootingRange && _nextFireTime < Time.time)
         {
@@ -110,7 +131,7 @@ public class FlyingEnemyAI : BaseEnemy
         else
         {
             following = false;
-            _lineOfSight = 10;
+            _lineOfSight = 12;
         }
     }
 

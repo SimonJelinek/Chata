@@ -845,9 +845,9 @@ MonoBehaviour:
   player: {fileID: 0}
   eyes: {fileID: 7478705846780594448}
   lavaCheck: {fileID: 702349367}
-  seeDistance: 15
-  speed: 1.8
-  jumpForce: 8
+  seeDistance: 12.5
+  speed: 2.2
+  jumpForce: 9
 --- !u!70 &58095939
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
