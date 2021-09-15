@@ -208,11 +208,11 @@ MonoBehaviour:
   staticEnemyBullet: {fileID: 5168333461257911401, guid: fdbbf127ee16613498f3f0b85bf68c26, type: 3}
   numberOfBullets: 1
   hitDistance: 8.88
-  bulletSpawnTime: 1.3
+  bulletSpawnTime: 1.1
   bulletSpace: 1
   firePoint: {fileID: 2322493633850787072}
-  player: {fileID: 0}
-  attackRange: 9.5
+  player: {fileID: 1264971188315353782, guid: e6dfb27ffb5b4c64d9e7c478eadba4a0, type: 3}
+  attackRange: 12
   xBulletSpawnPos: 4
   yBulletSpawnPos: 0.19
 --- !u!58 &3991160468195115463
