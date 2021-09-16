@@ -183,7 +183,7 @@ MonoBehaviour:
   _explosionRadius: 0.1
   _chargeTime: 0.6
   _startWaitTime: 0.7
-  _maxHealth: 3
+  _maxHealth: 4
   _flashMat: {fileID: 2100000, guid: d6d03618cbbdd0e47bf6e5134e19b6a1, type: 2}
 --- !u!50 &1368395004
 Rigidbody2D:

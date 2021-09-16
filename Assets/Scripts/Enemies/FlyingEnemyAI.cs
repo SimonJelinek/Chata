@@ -131,7 +131,7 @@ public class FlyingEnemyAI : BaseEnemy
         else
         {
             following = false;
-            _lineOfSight = 12;
+            _lineOfSight = 13;
         }
     }
 
