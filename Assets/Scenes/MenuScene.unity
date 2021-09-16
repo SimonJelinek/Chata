@@ -3823,6 +3823,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelsScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 3429541116177224184, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3429541116177224185, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3907,13 +3911,81 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3429541116539164998, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2267614151585171991, guid: 905c7116da6be6d49898c1f7d0f477ea, type: 2}
+    - target: {fileID: 3429541116539164998, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3429541116724416937, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3429541116724416937, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3429541116724416937, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3429541116724416937, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2267614151585171991, guid: 905c7116da6be6d49898c1f7d0f477ea, type: 2}
+    - target: {fileID: 3429541116724416937, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3429541116724416937, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3429541116904087917, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3429541116904087917, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1472354568}
+    - target: {fileID: 3429541116904087917, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HideLevels
+      objectReference: {fileID: 0}
+    - target: {fileID: 3429541116904087917, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainMenuScreen, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3429541116904087917, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3429541116986424807, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1021544530950413333}
+    - target: {fileID: 3429541117351795325, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2267614151585171991, guid: 905c7116da6be6d49898c1f7d0f477ea, type: 2}
+    - target: {fileID: 3429541117351795325, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3429541117582578221, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1021544530950413333}
+    - target: {fileID: 3429541117789602955, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2267614151585171991, guid: 905c7116da6be6d49898c1f7d0f477ea, type: 2}
+    - target: {fileID: 3429541117789602955, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
