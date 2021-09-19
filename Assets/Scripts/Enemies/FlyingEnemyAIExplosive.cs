@@ -62,14 +62,14 @@ public class FlyingEnemyAIExplosive : MonoBehaviour
             if (hit.collider == null)
             {
                 _inSight = true;
-                //Debug.Log("Player in sight");
+                // Debug.Log("Player in sight");
             }
             else
             {
                 if (hit.collider.gameObject.layer == 8)
                 {
                     _inSight = false;
-                    //Debug.Log("Hit wall");
+
                 }
             }
           // Patroling();
@@ -145,7 +145,7 @@ public class FlyingEnemyAIExplosive : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-           // _sr.material = _flashMat;
+            _sr.material = _flashMat;
             _health--;
 
             if (_health > 0)
@@ -165,7 +165,7 @@ public class FlyingEnemyAIExplosive : MonoBehaviour
             _sr.material = _flashMat;
             //Instantiate(_explosionParticles, gameObject.transform.position, Quaternion.identity);
             _explosion.SetActive(true);
-            Destroy(gameObject, 0.15f);       
+            Destroy(gameObject, 0.1f);       
     }
 
 }

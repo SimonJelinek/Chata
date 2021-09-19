@@ -11,9 +11,6 @@ public class Shooting : MonoBehaviour
     public GameObject _bulletPrefab;
     public TextMeshProUGUI _ammunitionDisplay;
     public TextMeshProUGUI _reloadingText;
-    public AudioSource _audioSource;
-    public AudioClip _reload;
-    public AudioClip _shoot;
 
     [Header("Weapon Types")]
 
@@ -85,10 +82,7 @@ public class Shooting : MonoBehaviour
 
     private void Shoot()
     {
-             _audioSource.clip = _shoot;
-             _audioSource.Play();
-
-             _readyToShoot = false;
+            _readyToShoot = false;
         
             GameObject _bullet = Instantiate(_bulletPrefab, _firePoint.position, _firePoint.rotation);
 
@@ -116,7 +110,6 @@ public class Shooting : MonoBehaviour
 
     private void ResetShot()
     {
-        _audioSource.clip = null;
         _readyToShoot = true;
         _allowInvoke = true;
     }
@@ -126,8 +119,6 @@ public class Shooting : MonoBehaviour
     {
         if(_bulletsLeft < _magazineSize)
         {
-            _audioSource.clip = _reload;
-            _audioSource.Play();
             if (_bulletsPerTap >= 2)
             {
                 _reloading = true;
@@ -142,9 +133,8 @@ public class Shooting : MonoBehaviour
     }
 
     private void ReloadFinished()
-    {
-        _audioSource.clip = null;
-        if (_allBullets >= _magazineSize && _reloading == true)
+    {        
+        if(_allBullets >= _magazineSize && _reloading == true)
         {
             if(_bulletsLeft > 0)
             {
@@ -187,7 +177,6 @@ public class Shooting : MonoBehaviour
 
     private void ReloadFinishedShotgun()
     {
-        _audioSource.clip = null;
         if (_allBullets >= _magazineSize && _reloading == true)
         {
             if (_bulletsLeft > 0)
