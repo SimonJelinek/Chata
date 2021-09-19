@@ -62,7 +62,7 @@ public class FlyingEnemyAIExplosive : MonoBehaviour
             if (hit.collider == null)
             {
                 _inSight = true;
-                Debug.Log("Player in sight");
+                // Debug.Log("Player in sight");
             }
             else
             {
@@ -145,7 +145,7 @@ public class FlyingEnemyAIExplosive : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-           // _sr.material = _flashMat;
+            _sr.material = _flashMat;
             _health--;
 
             if (_health > 0)

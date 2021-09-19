@@ -170,6 +170,8 @@ public class PlayerHealth : MonoBehaviour
             Invoke("ResetMaterial", 0.1f);
             playerMovementScript.isAlive = false;
             _rb.velocity = new Vector2(0, 0);
+            _rb.isKinematic = true;
+            GetComponent<CapsuleCollider2D>().enabled = false;
             dissolveMat.SetFloat("Fade", 0);
             timer = deathAnimTime;
             Invoke("GameOver", deathAnimTime + 0.2f);
