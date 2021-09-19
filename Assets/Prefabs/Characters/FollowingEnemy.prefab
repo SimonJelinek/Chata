@@ -842,6 +842,7 @@ MonoBehaviour:
   health: 6
   rifleAmmoBox: {fileID: 1065163634807158718}
   shotgunAmmoBox: {fileID: 5321264404537245265}
+  flashMat: {fileID: 2100000, guid: d6d03618cbbdd0e47bf6e5134e19b6a1, type: 2}
   player: {fileID: 0}
   eyes: {fileID: 7478705846780594448}
   lavaCheck: {fileID: 702349367}

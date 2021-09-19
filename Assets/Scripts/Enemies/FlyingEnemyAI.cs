@@ -30,8 +30,8 @@ public class FlyingEnemyAI : BaseEnemy
     [Header("Health")]
     // [SerializeField] private float _maxHealth; - v BaseEnemy
     private float _health;
-    private Material _defMat;
-    public Material _flashMat;
+    //private Material _defMat;
+    //public Material _flashMat;
     private SpriteRenderer _sr;
 
     public override void Start()
@@ -44,7 +44,7 @@ public class FlyingEnemyAI : BaseEnemy
 
         _sr = GetComponent<SpriteRenderer>();
         //_flashMat = Resources.Load("Flash", typeof(Material)) as Material;
-        _defMat = _sr.material;
+        //_defMat = _sr.material;
 
         // _health = _maxHealth; - v BaseEnemy
         _player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -131,7 +131,7 @@ public class FlyingEnemyAI : BaseEnemy
         else
         {
             following = false;
-            _lineOfSight = 12;
+            _lineOfSight = 13.5f;
         }
     }
 

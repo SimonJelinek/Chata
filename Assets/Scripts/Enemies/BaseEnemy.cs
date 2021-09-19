@@ -7,6 +7,7 @@ public class BaseEnemy : MonoBehaviour
     public int health;
     public GameObject rifleAmmoBox;
     public GameObject shotgunAmmoBox;
+    public Material flashMat;
 
     private int randomFactor;
     private int randomFactor2;
@@ -39,8 +40,6 @@ public class BaseEnemy : MonoBehaviour
         {
             health--;
 
-            // flash
-
             if(health <= 0)
             {
                 if (timer <= 0)
@@ -49,7 +48,17 @@ public class BaseEnemy : MonoBehaviour
                 }
                 
             }
+            else
+            {
+                sr.material = flashMat;
+                Invoke("ResetMaterial", 0.1f);
+            }
         }
+    }
+
+    public void ResetMaterial()
+    {
+        sr.material = dissolveMat;
     }
 
     public void Die()
