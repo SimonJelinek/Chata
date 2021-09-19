@@ -18,6 +18,7 @@ public class EnemyBullet : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         _target = GameObject.FindGameObjectWithTag("Player");
+        transform.right = _target.transform.position - transform.position;
         Vector2 _moveDir = (_target.transform.position - transform.position).normalized * _speed;
         _rb.velocity = new Vector2(_moveDir.x, _moveDir.y);
 

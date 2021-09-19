@@ -40,6 +40,7 @@ public class InGameScreen_NEW : MonoBehaviour
         crosshair.SetActive(true);
         Cursor.visible = false;
         gameObject.SetActive(true);
+        Debug.Log("Unpause");
     }
 
     public void GoToMenu()

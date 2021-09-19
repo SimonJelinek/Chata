@@ -77,6 +77,14 @@ public class PlayerHealth : MonoBehaviour
         {
             App.cameraFollow.ChangeCamera(1.6f, 2.15f);
         }
+
+        if (collision.gameObject.CompareTag("Health"))
+        {
+            _healthCount += 2;
+            UpdateUI();
+
+            HealthCheck();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -104,16 +112,6 @@ public class PlayerHealth : MonoBehaviour
                 Knockback();
             }
         }
-
-        if (collision.gameObject.CompareTag("Health"))
-        {
-            _healthCount += 2;
-            UpdateUI();
-
-            HealthCheck();
-        }
-
-
     }
 
     void LavaTrigger()
@@ -172,6 +170,8 @@ public class PlayerHealth : MonoBehaviour
             Invoke("ResetMaterial", 0.1f);
             playerMovementScript.isAlive = false;
             _rb.velocity = new Vector2(0, 0);
+            _rb.isKinematic = true;
+            GetComponent<CapsuleCollider2D>().enabled = false;
             dissolveMat.SetFloat("Fade", 0);
             timer = deathAnimTime;
             Invoke("GameOver", deathAnimTime + 0.2f);

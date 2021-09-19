@@ -21,6 +21,9 @@ public class StaticEnemy : BaseEnemy
     float xPos;
     bool shooting = false;
 
+    private Vector2 dir;
+    private float angle;
+
     public override void Start()
     {
         base.Start();
@@ -44,7 +47,11 @@ public class StaticEnemy : BaseEnemy
                 }
                 time = 0;
             }
-        }        
+        }
+
+        dir = player.position - transform.position;
+        angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle + 45f, Vector3.forward);
     }
 
     void FixedUpdate()

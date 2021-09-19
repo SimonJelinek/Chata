@@ -7,6 +7,7 @@ public class BaseEnemy : MonoBehaviour
     public int health;
     public GameObject rifleAmmoBox;
     public GameObject shotgunAmmoBox;
+    public Material flashMat;
 
     private int randomFactor;
     private int randomFactor2;
@@ -39,8 +40,6 @@ public class BaseEnemy : MonoBehaviour
         {
             health--;
 
-            // flash
-
             if(health <= 0)
             {
                 if (timer <= 0)
@@ -49,7 +48,17 @@ public class BaseEnemy : MonoBehaviour
                 }
                 
             }
+            else
+            {
+                sr.material = flashMat;
+                Invoke("ResetMaterial", 0.1f);
+            }
         }
+    }
+
+    public void ResetMaterial()
+    {
+        sr.material = dissolveMat;
     }
 
     public void Die()
@@ -62,15 +71,15 @@ public class BaseEnemy : MonoBehaviour
     public void DestroyEnemy()
     {
         randomFactor = Random.Range(1, 100);
-        if (randomFactor > 30)
+        if (randomFactor > 20)
         {
-            randomFactor2 = Random.Range(0, 2);
-            if (randomFactor2 == 0)
+            randomFactor2 = Random.Range(1, 100);
+            if (randomFactor2 < 65)
             {
                 rifleAmmoBox.transform.parent = null;
                 rifleAmmoBox.SetActive(true);
             }
-            if (randomFactor2 == 1)
+            else
             {
                 shotgunAmmoBox.transform.parent = null;
                 shotgunAmmoBox.SetActive(true);

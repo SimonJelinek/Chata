@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Checkpoints : MonoBehaviour
 {
+    public GameObject winScreen;
+    public GameObject ingamescreen;
+    public GameObject crosshair;
     public Vector2 checkPoint;
 
     public int nextSceneLoad;
@@ -39,7 +42,14 @@ public class Checkpoints : MonoBehaviour
             }
             else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level2"))
             {
-                //App.levelLoader.Load("Level3");
+                if (winScreen != null)
+                {
+                    winScreen.SetActive(true);
+                    ingamescreen.SetActive(false);
+                    crosshair.SetActive(false);
+                    Cursor.visible = true;
+                    Time.timeScale = 0;
+                }
             }
 
             if (nextSceneLoad > PlayerPrefs.GetInt("levelAt")) 
