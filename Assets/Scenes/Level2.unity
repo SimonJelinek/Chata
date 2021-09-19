@@ -2904,7 +2904,7 @@ PrefabInstance:
       objectReference: {fileID: 1264971187552263520}
     - target: {fileID: 170341021712700690, guid: 51305195bfc194547ad22b7f13f7c35c, type: 3}
       propertyPath: _maxHealth
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 170341021712700690, guid: 51305195bfc194547ad22b7f13f7c35c, type: 3}
       propertyPath: ingameScreen
