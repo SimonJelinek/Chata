@@ -191,11 +191,12 @@ MonoBehaviour:
   flashMat: {fileID: 2100000, guid: d6d03618cbbdd0e47bf6e5134e19b6a1, type: 2}
   _bullet: {fileID: 5168333461257911401, guid: fdbbf127ee16613498f3f0b85bf68c26, type: 3}
   _firePoint: {fileID: 4815734513201534246}
+  ruka: {fileID: 3347770271117757674}
   _nextFireTime: 0
   _fireRate: 1
   _enemySpeed: 2.4
   _enemySpeedPatroling: 1.5
-  _lineOfSight: 13.75
+  _lineOfSight: 14
   _shootingRange: 6
   _startWaitTime: 2
 --- !u!61 &4815734511853250316
