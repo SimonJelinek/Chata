@@ -150,13 +150,10 @@ public class FlyingEnemyAIExplosive : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-           // _sr.material = _flashMat;
+            _sr.material = _flashMat;
             _health--;
 
-            if (_health > 0)
-            {
-                Invoke("ResetMaterial", 0.1f);
-            }
+            Invoke("ResetMaterial", 0.1f);
         }
     }
 
