@@ -237,7 +237,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -430,8 +430,8 @@ MonoBehaviour:
   dustParticles: {fileID: 5310365485551531282}
   _onDropDustEffect: {fileID: 5038045064750523540, guid: 5d0b82277af5149428e5bc2685864bd9, type: 3}
   _landingSound: {fileID: 8300000, guid: eed785ead82b9aa4cab06aad98f48004, type: 3}
-  _footsteps: {fileID: 8300000, guid: b545f578ab82eec4b8c39b77fbbf720b, type: 3}
-  _jumpingSound: {fileID: 8300000, guid: b6beae11ee412054cae285e7081f3de2, type: 3}
+  _footsteps: {fileID: 8300000, guid: 9ac342c21906dee4e9ee94a78b9df8ca, type: 3}
+  _jumpingSound: {fileID: 8300000, guid: 95259dcdb8c30d748a1ded6026a53914, type: 3}
   _movementAcceleration: 25
   _maxMoveSpeed: 3.4
   _linearDrag: 15
@@ -480,8 +480,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: eed785ead82b9aa4cab06aad98f48004, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
