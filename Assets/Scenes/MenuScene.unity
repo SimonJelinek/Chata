@@ -732,8 +732,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lvlButtons:
   - {fileID: 556810309}
-  - {fileID: 1303981967}
   - {fileID: 342886179}
+  - {fileID: 1303981967}
   - {fileID: 393705273}
 --- !u!4 &701066505
 Transform:
@@ -3829,7 +3829,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3429541116134963840, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 129
+      value: -121
       objectReference: {fileID: 0}
     - target: {fileID: 3429541116134963840, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3839,6 +3839,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1021544530950413333}
+    - target: {fileID: 3429541116134963841, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Level1
+      objectReference: {fileID: 0}
     - target: {fileID: 3429541116134963846, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -3980,6 +3984,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3429541116724416937, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
+      propertyPath: m_text
+      value: LAVA PITS
+      objectReference: {fileID: 0}
+    - target: {fileID: 3429541116724416937, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
       propertyPath: m_fontSize
       value: 25
       objectReference: {fileID: 0}
@@ -4117,7 +4125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3429541117582578220, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 238
       objectReference: {fileID: 0}
     - target: {fileID: 3429541117582578220, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4127,6 +4135,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1021544530950413333}
+    - target: {fileID: 3429541117582578221, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Level2
+      objectReference: {fileID: 0}
     - target: {fileID: 3429541117582578226, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -4150,6 +4162,10 @@ PrefabInstance:
     - target: {fileID: 3429541117789602954, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3429541117789602955, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
+      propertyPath: m_text
+      value: ABANDONED MINES
       objectReference: {fileID: 0}
     - target: {fileID: 3429541117789602955, guid: 3fc0bbbe401bd4340be858490bf690d9, type: 3}
       propertyPath: m_fontSize
