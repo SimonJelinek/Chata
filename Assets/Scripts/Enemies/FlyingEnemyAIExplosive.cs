@@ -11,6 +11,8 @@ public class FlyingEnemyAIExplosive : MonoBehaviour
     private Transform _player;
     //public Transform[] _moveSpots;
     private Animator _anim;
+    private AudioSource _source;
+    public AudioClip _explode;
 
     [Header("Enemy Variables")]
     [SerializeField] private float _enemySpeed;
@@ -36,6 +38,7 @@ public class FlyingEnemyAIExplosive : MonoBehaviour
 
     void Start()
     {
+        _source = GetComponent<AudioSource>();
         _anim = GetComponent<Animator>();
 
         //_randomSpot = Random.Range(0, _moveSpots.Length);
@@ -102,6 +105,8 @@ public class FlyingEnemyAIExplosive : MonoBehaviour
         {
             if (_exploding2 == true)
             {
+                _source.clip = _explode;
+                _source.Play();
                 _anim.SetTrigger("Boom");
                 _exploding2 = false;
                 Invoke("Explode", _chargeTime);
