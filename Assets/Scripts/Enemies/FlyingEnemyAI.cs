@@ -7,6 +7,7 @@ public class FlyingEnemyAI : BaseEnemy
     [Header("Components")]
     public GameObject _bullet;
     public GameObject _firePoint;
+    public GameObject ruka;
     //public Transform[] _moveSpots;
     private Animator _anim;
 
@@ -23,7 +24,8 @@ public class FlyingEnemyAI : BaseEnemy
     private bool _inSight = false;
     private bool following = false;
     private float _waitTime;
-    private int dir;
+    private Vector3 dir;
+    private float angle;
     private bool lookingLeft;
     
     
@@ -77,16 +79,20 @@ public class FlyingEnemyAI : BaseEnemy
 
         if (_inSight == true)
         {
-            if(_player.position.x > transform.position.x && lookingLeft)
+            
+
+
+
+            if (_player.position.x > transform.position.x && lookingLeft)
             {
                 transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
-                transform.rotation = Quaternion.AngleAxis(-14f, Vector3.forward);
+                transform.rotation = Quaternion.AngleAxis(-10f, Vector3.forward);
                 lookingLeft = !lookingLeft;
             }
             if(_player.position.x < transform.position.x && !lookingLeft)
             {
                 transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
-                transform.rotation = Quaternion.AngleAxis(14f, Vector3.forward);
+                transform.rotation = Quaternion.AngleAxis(10f, Vector3.forward);
                 lookingLeft = !lookingLeft;
                 
             }
@@ -117,10 +123,12 @@ public class FlyingEnemyAI : BaseEnemy
     {
         float _distanceFromPlayer = Vector2.Distance(_player.position, transform.position);
 
+        ArmPointing();
+
         if (_distanceFromPlayer < _lineOfSight && _distanceFromPlayer > _shootingRange)
         {
             transform.position = Vector2.MoveTowards(this.transform.position, _player.position, _enemySpeed * Time.deltaTime);
-            _lineOfSight = 14;
+            _lineOfSight = 14f;
         }
         else if (_distanceFromPlayer <= _shootingRange && _nextFireTime < Time.time)
         {
@@ -131,8 +139,15 @@ public class FlyingEnemyAI : BaseEnemy
         else
         {
             following = false;
-            _lineOfSight = 13.5f;
+            _lineOfSight = 14f;
         }
+    }
+
+    public void ArmPointing()
+    {
+        dir = _player.position - ruka.transform.position;
+        angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        ruka.transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
     }
 
    /* private void Patroling()

@@ -11,7 +11,7 @@ public class BaseEnemy : MonoBehaviour
 
     private int randomFactor;
     private int randomFactor2;
-    private Material dissolveMat;
+    [HideInInspector] public Material dissolveMat;
     private SpriteRenderer sr;
     private float timer;
     private float deathAnimTime;
@@ -56,7 +56,7 @@ public class BaseEnemy : MonoBehaviour
         }
     }
 
-    public void ResetMaterial()
+    public virtual void ResetMaterial()
     {
         sr.material = dissolveMat;
     }
