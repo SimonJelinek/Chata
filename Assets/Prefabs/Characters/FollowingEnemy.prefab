@@ -915,7 +915,7 @@ MonoBehaviour:
   _anim: {fileID: 1132263752}
   _run: {fileID: 8300000, guid: 9ac342c21906dee4e9ee94a78b9df8ca, type: 3}
   seeDistance: 12.5
-  speed: 2.2
+  speed: 2.3
   jumpForce: 9
   bodyParts: []
 --- !u!70 &58095939
