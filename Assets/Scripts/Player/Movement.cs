@@ -54,7 +54,7 @@ public class Movement : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         dustParticlesEmission = dustParticles.emission;
-        _source.volume = PlayerPrefs.GetFloat("Volume");
+        _source.volume = 1;
         isAlive = true;
     }
 
