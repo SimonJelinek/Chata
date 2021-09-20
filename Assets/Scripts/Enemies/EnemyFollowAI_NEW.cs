@@ -22,6 +22,7 @@ public class EnemyFollowAI_NEW : BaseEnemy
     private int direction;
     private bool isFollowing;
     private bool isGrounded;
+    public SpriteRenderer[] bodyParts;
 
     public override void Start()
     {
@@ -31,6 +32,7 @@ public class EnemyFollowAI_NEW : BaseEnemy
         rb = GetComponent<Rigidbody2D>();
         offset = 0.2f;
         direction = 1;
+        bodyParts = GetComponentsInChildren<SpriteRenderer>();
     }
 
     void FixedUpdate()
@@ -144,4 +146,31 @@ public class EnemyFollowAI_NEW : BaseEnemy
         transform.localScale = new Vector2(dir, 1);
     }
 
+    public override void OnTriggerEnter2D(Collider2D collision)
+    {
+        base.OnTriggerEnter2D(collision);
+
+        if(collision.gameObject.CompareTag("Bullet"))
+        {
+            if(health > 0)
+            {
+                foreach (SpriteRenderer part in bodyParts)
+                {
+                    part.material = flashMat;
+                }
+                Invoke("ResetMaterial", 0.03f);
+            }
+        }
+    }
+
+    public override void ResetMaterial()
+    {
+        base.ResetMaterial();
+
+        foreach (SpriteRenderer part in bodyParts)
+        {
+            part.material = dissolveMat;
+        }
+
+    }
 }
