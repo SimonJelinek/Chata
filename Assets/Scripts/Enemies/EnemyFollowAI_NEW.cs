@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyFollowAI_NEW : BaseEnemy
 {
 
-    public Transform player;
+    private Transform player;
     public Transform eyes;
     public Transform lavaCheck;
 
@@ -25,6 +25,7 @@ public class EnemyFollowAI_NEW : BaseEnemy
 
     public override void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         base.Start();
         layerMask = ~(1 << 12);
         rb = GetComponent<Rigidbody2D>();
