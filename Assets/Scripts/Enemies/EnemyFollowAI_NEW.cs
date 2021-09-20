@@ -9,6 +9,8 @@ public class EnemyFollowAI_NEW : BaseEnemy
     public Transform eyes;
     public Transform lavaCheck;
     public Animator _anim;
+    private AudioSource _source;
+    public AudioClip _run;
 
     public float seeDistance;
     [Range(0, 10)]
@@ -24,9 +26,11 @@ public class EnemyFollowAI_NEW : BaseEnemy
     private bool isFollowing;
     private bool isGrounded;
     public SpriteRenderer[] bodyParts;
+    private bool _runSound;
 
     public override void Start()
     {
+        _source = GetComponent<AudioSource>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         base.Start();
         layerMask = ~(1 << 12);
@@ -41,11 +45,13 @@ public class EnemyFollowAI_NEW : BaseEnemy
        
         if (CanSeePlayer())
         {
+            _runSound = true;
             _anim.SetBool("Run", true);
             isFollowing = true;
         }
         else
         {
+            _runSound = false;
             _anim.SetBool("Run", false);
             Invoke("StopFollowingPlayer", 3);
         }
@@ -62,6 +68,12 @@ public class EnemyFollowAI_NEW : BaseEnemy
         if (!isGrounded && !isFollowing)
         {
             FollowPlayer();
+        }
+
+        if (_runSound == true && _source.isPlaying == false)
+        {
+            _source.clip = _run;
+            _source.Play();
         }
     }
 

@@ -10,6 +10,8 @@ public class FlyingEnemyAI : BaseEnemy
     public GameObject ruka;
     //public Transform[] _moveSpots;
     private Animator _anim;
+    private AudioSource _source;
+    public AudioClip _shoot;
 
     [Header("Enemy Variables")]
     [SerializeField] private float _nextFireTime;
@@ -38,6 +40,7 @@ public class FlyingEnemyAI : BaseEnemy
 
     public override void Start()
     {
+        _source = GetComponent<AudioSource>();
         _anim = GetComponent<Animator>();
         base.Start();
 
@@ -132,6 +135,8 @@ public class FlyingEnemyAI : BaseEnemy
         }
         else if (_distanceFromPlayer <= _shootingRange && _nextFireTime < Time.time)
         {
+            _source.clip = _shoot;
+            _source.Play();
             _anim.SetTrigger("Shoot");
             Instantiate(_bullet, _firePoint.transform.position, Quaternion.identity);
             _nextFireTime = Time.time + _fireRate;

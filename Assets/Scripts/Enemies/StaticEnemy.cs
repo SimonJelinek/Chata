@@ -12,6 +12,8 @@ public class StaticEnemy : BaseEnemy
     public GameObject firePoint;
     public Transform player;
     public float attackRange;
+    private AudioSource _source;
+    public AudioClip _shoot;
 
     float time;
 
@@ -26,6 +28,7 @@ public class StaticEnemy : BaseEnemy
 
     public override void Start()
     {
+        _source = GetComponent<AudioSource>();
         base.Start();
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
@@ -42,6 +45,8 @@ public class StaticEnemy : BaseEnemy
 
                 for (int x = 0; x < numberOfBullets; x++)
                 {
+                    _source.clip = _shoot;
+                    _source.Play();
                     Instantiate(staticEnemyBullet, firePoint.transform.position, Quaternion.identity);
                     xPos -= bulletSpace;
                 }
