@@ -8,6 +8,7 @@ public class EnemyFollowAI_NEW : BaseEnemy
     private Transform player;
     public Transform eyes;
     public Transform lavaCheck;
+    public Animator _anim;
 
     public float seeDistance;
     [Range(0, 10)]
@@ -40,10 +41,12 @@ public class EnemyFollowAI_NEW : BaseEnemy
        
         if (CanSeePlayer())
         {
+            _anim.SetBool("Run", true);
             isFollowing = true;
         }
         else
         {
+            _anim.SetBool("Run", false);
             Invoke("StopFollowingPlayer", 3);
         }
 

@@ -910,6 +910,7 @@ MonoBehaviour:
   flashMat: {fileID: 2100000, guid: d6d03618cbbdd0e47bf6e5134e19b6a1, type: 2}
   eyes: {fileID: 7478705846780594448}
   lavaCheck: {fileID: 702349367}
+  _anim: {fileID: 1132263752}
   seeDistance: 12.5
   speed: 2.2
   jumpForce: 9
