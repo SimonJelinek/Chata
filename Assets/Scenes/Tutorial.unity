@@ -2547,6 +2547,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1204319983}
     - target: {fileID: 1073046720105660075, guid: b4776b45fadbd1c4ab34cc9507dfa392, type: 3}
+      propertyPath: _sound
+      value: 
+      objectReference: {fileID: 8300000, guid: f4377768ad91f314f8ec3879bb6cfe0d, type: 3}
+    - target: {fileID: 1073046720105660075, guid: b4776b45fadbd1c4ab34cc9507dfa392, type: 3}
       propertyPath: podlaha
       value: 
       objectReference: {fileID: 844589125}
@@ -2666,6 +2670,10 @@ PrefabInstance:
       propertyPath: _ammunitionDisplay
       value: 
       objectReference: {fileID: 1344490403}
+    - target: {fileID: 8466057241708265033, guid: b4776b45fadbd1c4ab34cc9507dfa392, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4776b45fadbd1c4ab34cc9507dfa392, type: 3}
 --- !u!1 &1204319983 stripped
