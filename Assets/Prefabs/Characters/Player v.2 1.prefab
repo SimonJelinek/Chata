@@ -433,14 +433,14 @@ MonoBehaviour:
   _footsteps: {fileID: 8300000, guid: 9ac342c21906dee4e9ee94a78b9df8ca, type: 3}
   _jumpingSound: {fileID: 8300000, guid: 1e060a3219c009448bba05511843b435, type: 3}
   _movementAcceleration: 25
-  _maxMoveSpeed: 3.4
+  _maxMoveSpeed: 3.55
   _linearDrag: 15
   isAlive: 0
   _whatIsGround:
     serializedVersion: 2
     m_Bits: 256
   _checkRadius: 0.35
-  _jumpForce: 14
+  _jumpForce: 14.5
   _fallMultiplier: 5.3
   _lowJumpFallMultiplier: 7
   _airLinearDrag: 3
@@ -660,6 +660,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   podlaha: {fileID: 0}
+  _sound: {fileID: 0}
   podlahaCollider: {fileID: 0}
   doska1Collider: {fileID: 0}
   doska2Collider: {fileID: 0}
@@ -5787,7 +5788,7 @@ MonoBehaviour:
   _timeBetweenShooting: 0.65
   _timeBetweenShots: 0.01
   _bulletsPerTap: 5
-  _spread: 4.5
+  _spread: 5
   _bulletForce: 23
 --- !u!82 &1248372929
 AudioSource:
