@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &680248090747182034
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3358747979365739912}
+  - component: {fileID: 7245071887060335670}
+  m_Layer: 0
+  m_Name: Gold light - minca
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3358747979365739912
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680248090747182034}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 44.806, y: 18.62, z: 386.5535}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7245071887060335670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680248090747182034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LightType: 1
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 1
+  m_Color: {r: 0.990566, g: 0.9675381, b: 0.21026169, a: 1}
+  m_Intensity: 0.53
+  m_LightVolumeOpacity: 0.4
+  m_ApplyToSortingLayers: 2fa59719d1a1551dffba8398d11257a673863a37bfa78c4500000000
+  m_LightCookieSprite: {fileID: 0}
+  m_UseNormalMap: 0
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 0.35
+  m_PointLightDistance: 3
+  m_PointLightQuality: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0.2}
+  m_ShapePath:
+  - {x: -0.025686476, y: 0.12622626, z: -0.000003620953}
+  - {x: -0.05773324, y: 0.114282586, z: -0.000003620953}
+  - {x: -0.09714433, y: 0.09572622, z: -0.000003620953}
+  - {x: -0.1314786, y: 0.07462819, z: -0.000003620953}
+  - {x: -0.15300459, y: 0.05381474, z: -0.000003620953}
+  - {x: -0.17446975, y: 0.030101174, z: -0.000003620953}
+  - {x: -0.18914409, y: -0.0031317023, z: -0.000003620953}
+  - {x: -0.1867545, y: -0.036690433, z: -0.000003620953}
+  - {x: -0.178884, y: -0.06553513, z: -0.000003620953}
+  - {x: -0.16602576, y: -0.09503588, z: -0.000003620953}
+  - {x: -0.14366992, y: -0.11848658, z: -0.000003620953}
+  - {x: -0.113821596, y: -0.13111891, z: -0.000003620953}
+  - {x: -0.08961925, y: -0.1353094, z: -0.000003620953}
+  - {x: -0.05547398, y: -0.14186777, z: -0.000003620953}
+  - {x: -0.020368522, y: -0.14012337, z: -0.000003620953}
+  - {x: 0.009012748, y: -0.13649334, z: -0.000003620953}
+  - {x: 0.04076407, y: -0.12811235, z: -0.000003620953}
+  - {x: 0.067360364, y: -0.11039017, z: -0.000003620953}
+  - {x: 0.09850125, y: -0.08585111, z: -0.000003620953}
+  - {x: 0.1276566, y: -0.05282678, z: -0.000003620953}
+  - {x: 0.14536573, y: -0.021047216, z: -0.000003620953}
+  - {x: 0.15280609, y: 0.020757822, z: -0.000003620953}
+  - {x: 0.1459805, y: 0.058463603, z: -0.000003620953}
+  - {x: 0.13335471, y: 0.08055007, z: -0.000003620953}
+  - {x: 0.11549786, y: 0.10154382, z: -0.000003620953}
+  - {x: 0.091423675, y: 0.11724135, z: -0.000003620953}
+  - {x: 0.06328066, y: 0.12735589, z: -0.000003620953}
+  - {x: 0.01442846, y: 0.12718427, z: -0.000003620953}
